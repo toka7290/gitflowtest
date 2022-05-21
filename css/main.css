@@ -1,0 +1,252 @@
+/*何もなし：  要素
+    #       :   id
+    .       :   class
+    複数の場合コンマ
+    スペースで子孫セレクタ*/
+/*共通スタイル*/
+body{
+    color:black;
+    font-family:'YuMincho','Yu Mincho','游明朝体',游ゴシック;
+    line-height:1em;
+    background: #f0ebeb;
+    /*background: rgb(214, 253, 174);*/
+    word-wrap: break-word;
+    margin: 0;
+}
+div,span{
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+img{
+    width: 80%;
+}
+/*ヘッダー*/
+#header {
+    background: #fff;
+    padding: 13px 0 4px;
+    border-bottom: 1px solid #f0ebeb;
+    text-align: center;
+    display: block;
+}
+/*メインコンテンツ*/
+#content{
+    margin: 1em;
+    padding: 0.5em;
+    background: #fff;
+    border-radius: 0.5em;
+}
+/*フッター*/
+#footer{
+    border-top: solid 5px #00aa80;
+    padding-top: 1em;
+    line-height:1.5em;
+    background: #fff;
+    text-align: center;
+}
+#footer > div > nav{
+    display: inline;
+}
+#footer > div > nav > span::after{
+    content: " | ";
+}
+#footer > div > nav > span:last-child:after{
+    content: "";
+}
+#copyright{
+    font-size: small;
+}
+/*段落*/
+p{
+    margin: 0;
+    line-height: 1.5em;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0.5em;
+}
+/*ボタン*/
+.button{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #00BCD4;
+    background: #ECECEC;
+    transition: .4s;
+}
+.button:hover{
+    background: #00bcd4;
+    color: white;
+}
+/*タイトル*/
+#title{
+    line-height: 1em;
+    text-align: center;
+}
+#title a{
+    text-decoration: none;
+    color:orange;
+    -webkit-text-stroke: 1px #000;
+}
+/*メニュー*/
+.menu{
+    clear: both;
+    background: #d6fdae;
+    background-size: auto;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    height: 100%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    word-break : break-all;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+nav > ul > li {
+    position: relative;
+    float: left;
+    width: 19%;
+    padding: 0;
+    margin: 0;
+}
+nav > ul > li > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    color: #2F4A2D;
+    width: 100%;
+    height: 100%;
+}
+nav ul a:hover {
+    color: #00aa80;
+    background: #bbe493;
+    border-radius: 0.3em;
+    transition: .2s;
+}
+nav .sub-menu {
+    position: absolute;
+    width: 100%;
+    background: #d6fdae;
+    text-decoration: none;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    border: solid 1px #2F4A2D;
+    border-radius: 0.3em;
+    top: 30px;
+    display: none;
+    min-width: 13em;
+}
+nav .sub-menu a {
+    color: #2F4A2D;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    display: block;
+}
+nav .sub-menu a:hover {
+    color: #00aa80;
+}
+nav .menu-item-children:hover ul {
+    display: block;
+}
+nav li.menu-item-children li a:hover {
+    background: #bbe493;
+    transition: .2s;
+}
+/*字下げ*/
+.indent{
+    text-indent: 2em;
+}
+/*箇条書き(説明有)*/
+ul{
+    list-style: square;
+    margin-top: 0.2em;
+}
+li{
+    line-height: 1.5em;
+}
+ul span::before{
+    content: "- ";
+}
+ol{
+    margin-top: 0.2em;
+}
+ul > p::before{
+    content: "- ";
+}
+/*箇条書き*/
+.clause{
+    list-style: square;
+}
+/*目次*/
+#jump-list{
+    word-wrap: break-word;
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 0.3em;
+    padding: 10px;
+    margin-bottom: 1em;
+    width: auto;
+    display: table;
+    font-size: 95%;
+}
+.contentstitle{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.contentsbody{
+    list-style: square;
+    line-height:20px;
+    margin: 0;
+    padding: 10px 10px 10px 25px;
+}
+/*ソースコード貼り付け用*/
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: auto;
+}
+code {
+    padding: 2px 4px;
+    font-size: 15px;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    font-weight:bold;
+}
+/*２分割する場合*/
+.flex2{
+    display: flex;
+}
+.flex2_L{
+    width: 40%;
+}
+.flex2_R{
+    width: 50%;
+}
