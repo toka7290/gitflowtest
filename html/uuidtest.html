@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>クロックモードについて</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/animatescroll.js"></script>
+    <script src="js/uuid.js"></script>
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <div class="wrap">
+            <h1 id="title">
+                <a href="index.html">
+                    TTSProjection
+                </a>
+            </h1>
+        </div>
+        <div class="menu">
+            <nav role="navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">ホーム</a>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="index.html#howtouse">使い方</a>
+                        <ul class="sub-menu">
+                            <li><a href="program.html">プログラムリストの編集方法</a></li>
+                            <li><a href="clock.html">クロック機能の使い方</a></li>
+                            <li><a href="plus-mode.html">プラス機能の使い方</a></li>
+                            <li><a href="help.html">困ったときは？</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="changelogs.html">更新履歴</a>
+                        <ul class="sub-menu">
+                            <li><a href="site-changelogs.html">サイトの更新履歴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="download.html">ダウンロード</a>
+                    </li>
+                    <li>
+                        <a href="sitemap.html">ページ一覧</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <article id="content">
+            <button onclick="document.getElementById('uuid').textContent=getUuid_v4()">click</button>
+            <p id="uuid">クリック</p>
+        </article>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div>
+            <nav>
+                <span><a href="sitemap.html">ページ一覧</a></span>
+                <span>
+                    <a href="#" onclick="$('body').animatescroll();">
+                        ページの先頭へ戻る
+                    </a>
+                </span>
+            </nav>
+        </div>
+        <span id="copyright"><a href="https://twitter.com/kmad1008">&copy;2018 Tokasan</a></span>
+    </footer>
+</body>
+
+</html>

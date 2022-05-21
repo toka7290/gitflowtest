@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>クロックモードについて</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/animatescroll.js"></script>
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <div class="wrap">
+            <h1 id="title">
+                <a href="index.html">
+                    TTSProjection
+                </a>
+            </h1>
+        </div>
+        <div class="menu">
+            <nav role="navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">ホーム</a>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="index.html#howtouse">使い方</a>
+                        <ul class="sub-menu">
+                            <li><a href="program.html">プログラムリストの編集方法</a></li>
+                            <li><a href="clock.html">クロック機能の使い方</a></li>
+                            <li><a href="plus-mode.html">プラス機能の使い方</a></li>
+                            <li><a href="help.html">困ったときは？</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="changelogs.html">更新履歴</a>
+                        <ul class="sub-menu">
+                            <li><a href="site-changelogs.html">サイトの更新履歴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="download.html">ダウンロード</a>
+                    </li>
+                    <li>
+                        <a href="sitemap.html">ページ一覧</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <article id="content">
+            <div id="contenttitle">
+                <h2>クロックモード</h2>
+                <div id="jump-list">
+                    <div class="contents">
+                        <span class="contentstitle">目次</span>
+                        <ul class="contentsbody">
+                            <li><a href="#main">主な機能</a></li>
+                            <li><a href="#m_list">プログラムリストへの記述</a></li>
+                            <li><a href="#s_list">クロックリストの記述</a></li>
+                            <li><a href="#in_object">共通設定</a></li>
+                            <li><a href="#object_child">時計の種類と必要な属性について</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="img/clock.png" alt="clock.png">
+            </div>
+            <div id="description">
+                <p>クロックモードは時計を表示することができます。</p>
+                <h4>主な機能</h4>
+                <ul>
+                    <li>アナログ・デジタル時計の表示</li>
+                    <li>時計の複数表示</li>
+                    <li>時計の移動</li>
+                </ul>
+                <p>通常のプログラムリストに加えクロックリストを使用します。</p>
+                <p>クロックリストとはクロックモード独自の機能を利用するために使うリストです。</p>
+            </div>
+            <div id="m_list">
+                <h4>プログラムリストへの記述</h4>
+                <p>ノーマルモードと同じ属性に加えクロックモードの機能を利用するためにクロックリストのディレクトリを指定します。</p>
+                <span style="font-size: small;">記述例</span>
+                <pre><code class="prettyprint">&lt;config mode="clock" time="60" name="test.jpg" ratio="16:9" reference="/Expansion/clock.xml" background="128"/&gt;</code></pre>
+                <div>クロックリストの保存場所は任意で変更することができます(推奨<code>/Expansion/</code>内)</div>
+            </div>
+            <div id="s_list">
+                <h4>クロックリストの記述</h4>
+                <div>クロックリストには時計の詳細設定を記述します</div>
+                <span style="font-size: small;">記述例</span>
+                <pre><code class="prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;clock&gt;
+    &lt;object type="analog_img" position="100,200" size="20" board="clock1_dial.png" zone="Asia/Tokyo"&gt;
+        &lt;sec name="clock1_s.png" offset="0,0"/&gt;
+        &lt;min name="clock1_m.png" offset="0,0" smooth="true"/&gt;
+        &lt;hour name="clock1_h.png" offset="0,0" smooth="true"/&gt;
+    &lt;/object&gt;
+    &lt;object type="analog_pro" position="-400,70" size="100" zone="UTC+09:00"&gt;
+        &lt;board dialColor="255" indexColor="0" indexwidth="3"/&gt;
+        &lt;sec color="0" width="3"/&gt;
+        &lt;min color="0" width="3" smooth="true"/&gt;
+        &lt;hour color="0" width="3" smooth="true"/&gt;
+        &lt;move startTime="5" duration="2" beginPos="-300,-200" endPos="1280,-200" behavior="accel"/&gt;
+        &lt;move startTime="7" duration="0" beginPos="0,-200" endPos="-1280,-200" behavior="warp"/&gt;
+        &lt;move startTime="7" duration="2" beginPos="-1280,-200" endPos="0,-200" behavior="decel_3"/&gt;
+    &lt;/object&gt;
+    &lt;object type="degital" position="0,200" size="300" color="18,46,13" font="DSEG7Classic-Bold.ttf" zone="America/New_York" pattern="HH:mm:ss"/&gt;
+&lt;/clock&gt;</code></pre>
+            </div>
+            <div id="in_object">
+                <h4>共通設定</h4>
+                <div>以下の属性はどの時計にも必須となります。</div>
+                <div>
+                    <ul>
+                        <li>type</li>
+                        <p>時計の種類を設定します</p>
+                        <li>position</li>
+                        <p>時計の位置を設定します</p>
+                        <p>X座標,Y座標</code>(画面中央が<code>0,0</code>)</p>
+                        <li>size</li>
+                        <p>時計の大きさを記述します</p>
+                        <p>アナログ時計の場合、画面の高さの半分を<code>100</code>としたときの割合(%)で表します</p>
+                        <li>zone</li>
+                        <p>時計のタイムゾーンを設定します</p>
+                        <p>
+                            記述形式は<code>UTC</code>,<code>GMT</code>,<code>UT</code>を接頭辞から始まる記述形式(例:<code>UTC+09:00</code>)、
+                            もしくはTZDBの地域IDを使用することができます。(例:ロンドンの場合<code>Europe/London</code>)
+                        </p>
+                        <p>詳細は<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/time/ZoneId.html">ZoneId</a></p>
+                    </ul>
+                </div>
+            </div>
+            <div id="object_child">
+                <h4>時計の種類と必要な属性について</h4>
+                <div>
+                    <ul>
+                        <li>
+                            <h5>アナログ時計(画像)</h5>
+                        </li>
+                        <div>
+                            <ul>
+                                <li>board</li>
+                                <p>盤面に使用するファイル名を指定します</p>
+                                <div></div>
+                            </ul>
+                        </div>
+                        <p>アナログ時計を表示する場合は針別の設定があるため子要素があります。</p>
+                        <div>
+                            <ul>
+                                <li>sec</li>
+                                <div>時計の秒針部分の設定</div>
+                                <ul>
+                                    <li>name</li>
+                                    <p>秒針に使用するファイル名を指定します</p>
+                                    <li>offset</li>
+                                    <p>回転軸の座標を設定します。</p>
+                                    <li>smooth</li>
+                                    <p>スイープ運針させるかさせないか設定します。(true/false)</p>
+                                </ul>
+                                <li>min</li>
+                                <div>時計の長針部分の設定</div>
+                                <ul>
+                                    <li>name</li>
+                                    <p>長針に使用するファイル名を指定します</p>
+                                    <li>offset</li>
+                                    <p>回転軸の座標を設定します。</p>
+                                    <li>smooth</li>
+                                    <p>スイープ運針させるかさせないか設定します。(true/false)</p>
+                                </ul>
+                                <li>hour</li>
+                                <div>時計の短針部分の設定</div>
+                                <ul>
+                                    <li>name</li>
+                                    <p>短針に使用するファイル名を指定します</p>
+                                    <li>offset</li>
+                                    <p>回転軸の座標を設定します。</p>
+                                    <li>smooth</li>
+                                    <p>スイープ運針させるかさせないか設定します。(true/false)</p>
+                                </ul>
+                            </ul>
+                        </div>
+                        <li>
+                            <h5>アナログ時計(プログラム)</h5>
+                        </li>
+                        <p>アナログ時計を表示する場合は針別の設定があるため子要素があります。</p>
+                        <div>
+                            <ul>
+                                <li>board</li>
+                                <p>時計の盤面部分の設定</p>
+                                <ul>
+                                    <li>dialColor</li>
+                                    <p>盤面の色を指定します。(RGBもしくはWB)</p>
+                                    <li>indexColor</li>
+                                    <p>インデックスの色を指定します。(RGBもしくはWB)</p>
+                                    <li>indexwidth</li>
+                                    <p>インデックスの太さを指定します。</p>
+                                </ul>
+                                <li>sec</li>
+                                <div>時計の秒針部分の設定</div>
+                                <ul>
+                                    <li>color</li>
+                                    <p>秒針色を指定します。(RGBもしくはWB)</p>
+                                    <li>width</li>
+                                    <p>秒針の太さを指定します。</p>
+                                    <li>smooth</li>
+                                    <p>スイープ運針させるかさせないか設定します。(true/false)</p>
+                                </ul>
+                                <li>min</li>
+                                <div>時計の長針部分の設定</div>
+                                <ul>
+                                    <li>color</li>
+                                    <p>長針色を指定します。(RGBもしくはWB)</p>
+                                    <li>width</li>
+                                    <p>長針の太さを指定します。</p>
+                                    <li>smooth</li>
+                                    <p>スイープ運針させるかさせないか設定します。(true/false)</p>
+                                </ul>
+                                <li>hour</li>
+                                <div>時計の短針部分の設定</div>
+                                <ul>
+                                    <li>color</li>
+                                    <p>短針色を指定します。(RGBもしくはWB)</p>
+                                    <li>width</li>
+                                    <p>短針の太さを指定します。</p>
+                                    <li>smooth</li>
+                                    <p>スイープ運針させるかさせないか設定します。(true/false)</p>
+                                </ul>
+                            </ul>
+                        </div>
+                        <li>
+                            <h5>デジタル時計</h5>
+                        </li>
+                        <p>デジタル時計ではフォントを設定する必要があります</p>
+                        <div>
+                            <ul>
+                                <li>color</li>
+                                <p>色を指定します。(RGBもしくはWB)</p>
+                                <li>font</li>
+                                <p>時計のフォントを指定します。</p>
+                                <p>デフォルトのフォントディレクトリは<code>data/font</code>に設定されています。</p>
+                                <li>pattern</li>
+                                <p>時計の表示形式を指定します。書式は一般に使用される形式をそのまま使用できます。</p>
+                                <p>(例:2018.10.28(日) 17(午後 05):12:07.168<code>yyyy.MM.dd(E) HH(a hh):mm:ss.SSS</code>)</p>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div>
+            <nav>
+                <span><a href="sitemap.html">ページ一覧</a></span>
+                <span>
+                    <a href="#" onclick="$('body').animatescroll();">
+                        ページの先頭へ戻る
+                    </a>
+                </span>
+            </nav>
+        </div>
+        <span id="copyright"><a href="https://twitter.com/kmad1008">&copy;2018 Tokasan</a></span>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plus機能について</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/animatescroll.js"></script>
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <div class="wrap">
+            <h1 id="title">
+                <a href="index.html">
+                    TTSProjection
+                </a>
+            </h1>
+        </div>
+        <div class="menu">
+            <nav role="navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">ホーム</a>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="index.html#howtouse">使い方</a>
+                        <ul class="sub-menu">
+                            <li><a href="program.html">プログラムリストの編集方法</a></li>
+                            <li><a href="clock.html">クロック機能の使い方</a></li>
+                            <li><a href="plus-mode.html">プラス機能の使い方</a></li>
+                            <li><a href="help.html">困ったときは？</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="changelogs.html">更新履歴</a>
+                        <ul class="sub-menu">
+                            <li><a href="site-changelogs.html">サイトの更新履歴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="download.html">ダウンロード</a>
+                    </li>
+                    <li>
+                        <a href="sitemap.html">ページ一覧</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <article id="content">
+            <div id="contenttitle">
+                <h2>Plus機能の使い方</h2>
+                <div id="jump-list">
+                    <div class="contents">
+                        <span class="contentstitle">目次</span>
+                        <ul class="contentsbody">
+                            <li><a href="#main">主な機能</a></li>
+                            <li><a href="#m_list">プログラムリストへの記述</a></li>
+                            <li><a href="#s_list">プラスリストの記述</a></li>
+                            <li><a href="#in_display">display内の共通設定</a></li>
+                            <li><a href="#display_child">displayの子要素と属性について</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="description">
+                <h4>主な機能</h4>
+                <p>プラス機能では以下のことが行うことができます。</p>
+                <ul>
+                    <li>複数の画像表示</li>
+                    <li>画像のフェードインアウト</li>
+                    <li>画像の移動</li>
+                </ul>
+                <p>プラス機能ではプログラムリストに加え、プラスリストを使用します。</p>
+                <p>プラスリストとはプラス機能独自の機能を設定するために使用するものです</p>
+            </div>
+            <div id="m_list">
+                <h4>プログラムリストへの記述</h4>
+                <p>ノーマルモードと同じ属性に加えプラス機能を利用するためにプラスリストのディレクトリを指定します。</p>
+                <span style="font-size: small;">記述例</span>
+                <pre><code class="prettyprint">&lt;config mode="normal+" time="20" name="wallpaper.jpg" ratio="16:9"　reference="/Expansion/plus.xml" background="255"/&gt;</code></pre>
+                <div>プラスリストの保存場所は任意で変更することができます(推奨<code>/Expansion/</code>内)</div>
+            </div>
+            <div id="s_list">
+                <h4>プラスリストの記述</h4>
+                <div>プラスリストには各画像の詳細設定を記述します</div>
+                <span style="font-size: small;">記述例</span>
+                <pre><code class="prettyprint">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;puls&gt;
+    &lt;display name="wallpaper_04.jpg" ratio="16:9"&gt;
+        &lt;move startTime="5" duration="2" beginPos="0,0" endPos="1280,0" behavior="accel"&gt;
+        &lt;move startTime="7" duration="0" beginPos="0,0" endPos="-1280,0" behavior="warp"&gt;
+        &lt;move startTime="7" duration="2" beginPos="-1280,0" endPos="0,0" behavior="decel_3"&gt;
+    &lt;/display&gt;
+    &lt;display name="19162_en_1.jpg" ratio="16:9" timing="10" duration="3"&gt;
+&lt;/puls&gt;</code></pre>
+                <p>画像を複数表示する場合<code>&lt;puls&gt;</code>内に<code>&lt;display&gt;</code>を複数設置し必要な情報を記述します</p>
+                <p><code>&lt;display&gt;</code>のひと固まりがいつの画像の挙動を表しています。</p>
+                <p>上から順に表示されていきます。一番下(xml上の一番上)の画像はフェードインアウトはできません</p>
+            </div>
+            <div id="in_display">
+                <h4>display内の共通設定</h4>
+                <p><code>&lt;display&gt;</code>内にある以下の属性は再生時には必須となります。</p>
+                <ul>
+                    <li>name</li>
+                    <p>表示する画像のファイル名を指名します。(要拡張子)</p>
+                    <p>対応する画像形式はJPEG<code>.jpg</code>,PNG<code>.png</code>,GIF<code>.gif</code>,TarGA<code>.tga</code></p>
+                    <li>ratio</li>
+                    <p>画像の縦横比を指定します</p>
+                    <p><code>1:1</code>、<code>4:3</code>、<code>16:9</code>の中から選択できます</p>
+                    <li>timing※一番上を除く</li>
+                    <p>フェードを開始する時間を指定します。(秒)</p>
+                    <li>duration※一番上を除く</li>
+                    <p>画像が完全に消えるまでの時間を指定します(秒)</p>
+                    <p>0でフェードではなく切り替えと同じ状態になります</p>
+                </ul>
+            </div>
+            <div id="display_child">
+                <h4>displayの子要素と属性について</h4>
+                <p>move要素を利用することで画像を自由自在に動かすことができます。</p>
+                <ul>
+                    <li>startTime</li>
+                    <p>移動を開始する時間を指定します(秒)</p>
+                    <li>duration</li>
+                    <p>移動する時間を指定します(秒)</p>
+                    <li>beginPos</li>
+                    <p>移動前の座標を指定します</p>
+                    <p><code>X座標,Y座標</code>(画面中央が<code>0,0</code>)</p>
+                    <li>endPos</li>
+                    <p>移動後の座標を指定します</p>
+                    <p><code>X座標,Y座標</code>(画面中央が<code>0,0</code>)</p>
+                    <li>behavior</li>
+                    <p>移動方式を指定します。</p>
+                    <ul>
+                        <li>accel</li>
+                        <p>一定の速度で移動します</p>
+                        <li>accel_2</li>
+                        <p>徐々に早くなります</p>
+                        <li>accel_3</li>
+                        <p>徐々に遅くなります</p>
+                        <li>decel</li>
+                        <li>decel_2</li>
+                        <li>decel_3</li>
+                        <p>減速します</p>
+                        <p>減速は試験的で挙動が不安定です</p>
+                        <li>warp</li>
+                        <p>endPosにワープします。</p>
+                    </ul>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div>
+            <nav>
+                <span><a href="sitemap.html">ページ一覧</a></span>
+                <span>
+                    <a href="#" onclick="$('body').animatescroll();">
+                        ページの先頭へ戻る
+                    </a>
+                </span>
+            </nav>
+        </div>
+        <span id="copyright"><a href="https://twitter.com/kmad1008">&copy;2018 Tokasan</a></span>
+    </footer>
+</body>
+
+</html>
