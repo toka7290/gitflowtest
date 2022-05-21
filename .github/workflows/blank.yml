@@ -39,6 +39,7 @@ jobs:
         run: |
           pwd
           ls -a
+          find ./locate -type f
       # create locale file
       - name: create locale file
         run: |
