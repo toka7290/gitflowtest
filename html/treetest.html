@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>クロックモードについて</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/jstree.min.js"></script>
+    <script src="js/animatescroll.js"></script>
+    <script src="js/uuid.js"></script>
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <div class="wrap">
+            <h1 id="title">
+                <a href="index.html">
+                    TTSProjection
+                </a>
+            </h1>
+        </div>
+        <div class="menu">
+            <nav role="navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">ホーム</a>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="index.html#howtouse">使い方</a>
+                        <ul class="sub-menu">
+                            <li><a href="program.html">プログラムリストの編集方法</a></li>
+                            <li><a href="clock.html">クロック機能の使い方</a></li>
+                            <li><a href="plus-mode.html">プラス機能の使い方</a></li>
+                            <li><a href="help.html">困ったときは？</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-children">
+                        <a href="changelogs.html">更新履歴</a>
+                        <ul class="sub-menu">
+                            <li><a href="site-changelogs.html">サイトの更新履歴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="download.html">ダウンロード</a>
+                    </li>
+                    <li>
+                        <a href="sitemap.html">ページ一覧</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <article id="content">
+            <div id="filetree">
+                <ul>
+                    <li><a href="sitemap.html">manifest.json</a></li>
+                    <li><a href="">pack_icon.png</a></li>
+                    <li class="jstree-open">
+                        entities
+                        <ul>
+                            <li><a href="">entity</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        items
+                        <ul>
+                            <li><a href="">item</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        loot_tables
+                        <ul>
+                            <li><a href="">loot table</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        recipes
+                        <ul>
+                            <li><a href="">recipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        loot_tables
+                        <ul>
+                            <li><a href="">entity</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        scripts
+                        <ul>
+                            <li><a href="">script</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        spawn_rules
+                        <ul>
+                            <li><a href="">spawn rule</a></li>
+                        </ul>
+                    </li>
+                    <li class="jstree-open">
+                        trading
+                        <ul>
+                            <li><a href="">trading</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <script>$(function(){
+                $('#filetree li').attr({'data-jstree':'{"icon":"icons/file.svg"}'});
+                $('.jstree-open').attr({'data-jstree':'{"icon":"icons/folder.svg"}'});
+                $('#filetree').jstree();
+                });</script>
+            <dl>
+                <dd style="vertical-align: middle"><img src="icons/file.svg" alt="img" style="width: 24px;height: 24px;vertical-align: middle">data.png</dd>
+            </dl>
+        </article>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div>
+            <nav>
+                <span><a href="sitemap.html">ページ一覧</a></span>
+                <span>
+                    <a href="#" onclick="$('body').animatescroll();">
+                        ページの先頭へ戻る
+                    </a>
+                </span>
+            </nav>
+        </div>
+        <span id="copyright"><a href="https://twitter.com/kmad1008">&copy;2018 Tokasan</a></span>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+page.title=About TTSProjection
+
+header.title=TTSProjection
+header.menu.home=Home
+header.menu.howtouse=How to Use
+header.menu.program=How to Edit Program List
+header.menu.clock=How to use the Clock function
+header.menu.plus_mode=How to use the Plus function
+header.menu.help=What to do if you have a problem?
+header.menu.changelogs=Update History
+header.menu.site_changelogs=Site Update History
+header.menu.download=Download
+header.menu.sitemap=Page List
+
+main.content.description.title=What is TTSProjection?
+main.content.description.indent.1=TTSProjection is a projection mapping software for flat surfaces created by Toka.
+main.content.description.indent.2=Research Project in FY30
+main.content.description.indent.3=Official name: Tamura Tokai Sibuya Projection
+
+main.content.work.title.1=Main Functions
+main.content.work.clause.1=Playback of multiple images and videos
+main.content.work.clause.2=Display of analog and digital clocks
+main.content.work.clause.3=Accurate media control by program list
+main.content.work.title.2=Description of each mode
+main.content.work.ul.1=Normal mode (normal)
+main.content.work.ul.2=Displays images or videos as they are.
+main.content.work.ul.3=It is also possible to display nothing for a certain period of time.
+main.content.work.ul.4=Clock mode (clock)
+main.content.work.ul.5=Displays a clock in front of the normal mode.
+main.content.work.ul.6=Clock can be drawn programmatically without using images or videos
+main.content.work.ul.7=The clock ticks the current time exactly!
+main.content.work.ul.8=Normal Plus Mode (normal+)
+main.content.work.ul.9=Fade in/out, rotation, and other image and video movements
+main.content.work.ul.10=Debug mode(debug)
+main.content.work.ul.11=Mode to display test patterns. For adjusting the projector.
+
+main.content.howtouse.title.1=How to use
+main.content.howtouse.ol.1=Add photos, videos, etc. to
+main.content.howtouse.ol.2=data/Media
+main.content.howtouse.ol.3=Save photos, videos, etc. in
+main.content.howtouse.ol.4=Set the order of playback, etc. in the program list.
+main.content.howtouse.ol.5=By default, the
+main.content.howtouse.ol.6=data
+main.content.howtouse.ol.7=in the
+main.content.howtouse.ol.8=program.xml
+main.content.howtouse.ol.9=in data.
+main.content.howtouse.ol.10=For more information on how to edit the program list, click here!
+main.content.howtouse.ol.11=Start the application.
+main.content.howtouse.title.2=Cautions for use
+main.content.howtouse.indent.1=If the program is saved on a removable disk, copy it to the desktop and use it.
+main.content.howtouse.indent.2=*If you start the application from a removable disk, it may not work properly.
+main.content.howtouse.indent.3=If the operation is not stable, it may be improved by reducing the video quality.
+ 
+main.content.changelog.title=Update History
+main.content.changelog.1=Latest Version
+main.content.changelog.2=View past update history
+
+main.content.download.title=Download
+main.content.download.indent.1=Requirements
+main.content.download.indent.2=Can run on environments that support java 8
+main.content.download.indent.3=Click here to download
+
+footer.sitemap=Page List
+footer.top=Return to top of page
