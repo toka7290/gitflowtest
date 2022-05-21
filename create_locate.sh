@@ -1,4 +1,5 @@
 #!/bin/bash
+
 mkdir -p dist
 langfiles=(`find ./locate -type f`)
 langages=(`find ./locate -type f -exec basename {} .lang \;`)

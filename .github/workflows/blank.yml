@@ -43,7 +43,7 @@ jobs:
       # create locale file
       - name: create locale file
         run: |
-          sh ./create_locate.sh
+          bash ./create_locate.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
