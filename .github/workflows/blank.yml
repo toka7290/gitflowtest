@@ -38,4 +38,4 @@ jobs:
       - name: test
         run: |
           pwd
-          ll -a
+          ls -a
