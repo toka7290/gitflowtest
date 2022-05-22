@@ -193,7 +193,7 @@ window.addEventListener("load", function () {
     req.responseType = "json";
     req.send();
     req.onload = function () {
-      LOCATE = JSON.parse(req.responseText);
+      LOCATE = JSON.parse(req.response);
     };
   }
   $('input[type="button"].generate_uuid')
