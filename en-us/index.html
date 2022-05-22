@@ -1,140 +1,1254 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>About TTSProjection</title>
-        <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
-        <link rel="stylesheet" href="../css/main.css">
-        <script src="../js/jquery-3.3.1.min.js"></script>
-        <script src="../js/animatescroll.js"></script>
-    </head>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
+    <meta charset="UTF-8">
+    <title>Manifest Generator - TokaTools</title>
+    <!-- metadata -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="manifest.json,manifest,Manifest,マニフェスト,Generator,generator,Minecraft,minecraft,マインクラフト,BE,Bedrock Edition,bedrock,tool,ツール,Addon,Add-on,アドオン,resource,behavior,subpacks,metadata,dependencies,modules,capabilities,とかさん">
+    <meta name="Description" content="Add-on creation aid for Minecraft Bedrock Edition. Edit, convert, generate, and preview manifest.json easily and conveniently. Full support for resource packs, behavior packs, world templates, and everything in between! Easy editing of decorative text with preview display function!">
+    <meta http-equiv="content-language" content="ja">
+    <meta name="theme-color" content="#60ad5e" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta property="og:url" content="https://toka7290.github.io/MCAddonSetupManager/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Manifest Generator">
+    <meta property="og:title" content="Manifest Generator">
+    <meta property="og:description" content="Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.">
+    <meta property="og:image" content="https://toka7290.github.io/MCAddonSetupManager/img/icon_2000.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@toka7290">
+    <meta name="google-site-verification" content="Gvi-XrJEZRsxJgsNLv5NOddbD6COJo804pUgyPvpi34">
+    <!-- css -->
+    <link rel="preload" href="../css/style.min.css" as="style">
+    <link rel="stylesheet" href="../css/color.min.css" async>
+    <link rel="stylesheet" href="../css/style.min.css" async>
+    <link rel="stylesheet" href="../css/prism.min.css" async defer>
+    <link rel="stylesheet" href="../css/mc_format.min.css" async defer>
+    <link rel="stylesheet" href="../css/phone.min.css" media="(max-width: 59rem)" async>
+    <!-- icon etc -->
+    <link rel="apple-touch-icon" href="../img/icon_apple-touch-icon.png">
+    <link rel="icon" href="../img/icon.webp">
+    <link rel="manifest" href="../json/webapp.webmanifest">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "name": "Manifest Generator",
+        "browserRequirements": "requires HTML5 support",
+        "image": "../img/icon_2000.png",
+        "about": "Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "TokaTools",
+            "item": "https://toka7290.github.io/TokaTools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Manifest Generator",
+            "item": "https://toka7290.github.io/MCAddonSetupManager/"
+          }
+        ],
+        "url": "https://toka7290.github.io/MCAddonSetupManager/",
+        "operatingSystem": "Any. It is a Web Application",
+        "creator": {
+          "@type": "Person",
+          "name": "とかさん",
+          "url": "http://tokamcwin10.blog.jp/"
+        }
+      }
+    </script>
+  </head>
 
-    <body>
-        <header id="header" role="banner">
-            <div class="wrap">
-                <h1 id="title">
-                    <a href="index.html">
-                        TTSProjection
-                    </a>
-                </h1>
+  <body>
+    <header class="header">
+      <div class="header-main">
+        <div class="title-icon">
+          <img src="../img/icon.svg" alt="" height="32px" width="32px">
+        </div>
+        <div class="title">
+          <h1>Manifest Generator</h1>
+          <p>version: 1.8.0</p>
+        </div>
+        <div class="header-menu">
+          <div class="menu_button file_load_button disabled">
+            <label for="load_file">Load</label>
+          </div>
+          <div class="menu_button import_button">
+            <label for="input-file">Import</label>
+          </div>
+          <div class="help-content top" id="help-content-1">
+            <p>Loads a file</p>
+          </div>
+          <div class="menu_button" id="show-preview">
+            <span>Preview</span>
+            <div class="help-content top" id="help-content-3">
+              <p>
+                Actual display of entered and edited data, json viewing and downloading/copying.
+              </p>
             </div>
-            <div class="menu">
-                <nav role="navigation">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li class="menu-item-children">
-                            <a href="index.html#howtouse">How to Use</a>
-                            <ul class="sub-menu">
-                                <li><a href="program.html">How to Edit Program List</a></li>
-                                <li><a href="clock.html">How to use the Clock function</a></li>
-                                <li><a href="plus-mode.html">How to use the Plus function</a></li>
-                                <li><a href="help.html">What to do if you have a problem?</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-children">
-                            <a href="changelogs.html">Update History</a>
-                            <ul class="sub-menu">
-                                <li><a href="site-changelogs.html">Site Update History</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="download.html">Download</a>
-                        </li>
-                        <li>
-                            <a href="sitemap.html">Page List</a>
-                        </li>
-                    </ul>
-                </nav>
+          </div>
+          <div class="menu_button">
+            <p id="show_help">Help</p>
+          </div>
+          <div class="menu_button">
+            <label for="open-about">About</label>
+          </div>
+        </div>
+        <div class="header-menu-alt">
+          <div class="alt_menu_button file_load_button disabled">
+            <input type="button" id="load_file" class="invisible_Control" ui>
+            <label for="load_file" class="alt_menu_button_label" title="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V9l-7-7z" />
+                <path d="M13 3v6h6" />
+              </svg>
+              <p>Open</p>
+            </label>
+          </div>
+          <div class="alt_menu_button import_button">
+            <input type="file" name="input-file" id="input-file" accept=".json" class="invisible_Control">
+            <label for="input-file" class="alt_menu_button_label">
+              <img src="../img/import.svg" alt="import" width="32px" height="32px">
+              <p>Import</p>
+            </label>
+          </div>
+          <details class="open-more-info">
+            <summary class="more-info-icon"><img src="../img/more.svg" alt="more" width="32px" height="32px"></summary>
+            <ul class="more-info">
+              <li>
+                <a href="https://toka7290.github.io/TokaTools/" target="_blank" title="TokaTools" rel="noopener noreferrer"><img src="../icons/TokaTools.svg" alt="" width="32px" height="32px">
+                  <p>TokaTools</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://tokamcwin10.blog.jp/" target="_blank" title="とかさんのブログ" rel="noopener noreferrer"><img src="../img/homepage.svg" alt="" width="32px" height="32px">
+                  <p>Homepage</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/toka7290" target="_blank" title="Twitter" rel="noopener noreferrer"><img src="../img/twitter.svg" alt="" width="32px" height="32px">
+                  <p>Twitter</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/toka7290/MCAddonSetupManager" target="_blank" title="Github" rel="noopener noreferrer"><img src="../img/github.svg" alt="" width="32px" height="32px">
+                  <p>GitHub</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://tokamcwin10.blog.jp/article-38495158" target="_blank" title="manifest.jsonの解説ページに飛びます。" rel="noopener noreferrer"><img src="../img/help.svg" alt="" width="32px" height="32px">
+                  <p>Manifest Help</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://tokamcwin10.blog.jp/article-39181630" target="_blank" title="Subpacksの解説ページに飛びます。" rel="noopener noreferrer"><img src="../img/subpacks.svg" alt="" width="32px" height="32px">
+                  <p>Subpacks Help</p>
+                </a>
+              </li>
+              <li>
+                <input type="button" id="open-about" class="invisible_Control" ui>
+                <label class="open-about" for="open-about">
+                  <img src="../img/icon.svg" alt="" height="32px" width="32px">
+                  <p>about</p>
+                </label>
+              </li>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <div id="page-help"></div>
+      <div class="page-about about-hide">
+        <div class="about-area">
+          <div class="close-about">
+            <input type="button" id="close-about-btn" class="invisible_Control" ui>
+            <label for="close-about-btn">
+              <img src="../img/close.svg" alt="" id="close-about_image" width="50px" height="50px">
+            </label>
+          </div>
+          <div class="about-content">
+            <img src="../img/icon.svg" alt="" width="180px" height="180px">
+            <div class="about-title">
+              <h2><span class="sub_title">TokaTools</span>Manifest Generator</h2>
+              <p>version: 1.8.0</p>
             </div>
-        </header>
+            <div class="about-description">
+              <p>Tool to generate manifest.json required by add-ons (resource packs, behavior packs, world templates, skin packs, etc.) in Minecraft Bedrock Edition (BE).</p>
+              <p>All functions are fully supported.</p>
+            </div>
+            <div class="about-external-link">
+              <a href="https://toka7290.github.io/TokaTools/" target="_blank" title="TokaTools" rel="noopener noreferrer"><img src="../icons/TokaTools.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://tokamcwin10.blog.jp/" target="_blank" title="Toka blog" rel="noopener noreferrer"><img src="../img/homepage.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://twitter.com/toka7290" target="_blank" title="Twitter" rel="noopener noreferrer"><img src="../img/twitter.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://github.com/toka7290/MCAddonSetupManager" target="_blank" title="Github" rel="noopener noreferrer"><img src="../img/github.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://tokamcwin10.blog.jp/article-38495158" target="_blank" title="Jump to the explanation page of manifest.json." rel="noopener noreferrer"><img src="../img/help.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://tokamcwin10.blog.jp/article-39181630" target="_blank" title="Jump to the explanation page of Subpacks." rel="noopener noreferrer"><img src="../img/subpacks.svg" alt="" width="32px" height="32px"></a>
+              <div class="share">
+                <input type="button" id="page-share" class="invisible_Control" ui>
+                <label for="page-share"><img src="../img/share.svg" alt="" width="32px" height="32px"></label>
+              </div>
+            </div>
+            <div class="copyright">
+              <p>Copyright (c) 2021 とかさん</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="help-content bottom" id="help-content_2">
+      <p>Edit data</p>
+      <p>Errors, etc. can be seen in the Issues tab at the bottom.</p>
+    </div>
+    <div class="file-drop-zone hide">
+      <div class="file-drop-zone-textarea">
+        <img src="../img/import.svg" alt="import" width="50px" height="50px">
+        <p>ファイルをドロップして&NewLine;インポートします。</p>
+      </div>
+      <div class="file-drop-zone-pick">
+      </div>
+    </div>
+    <style>
+      body {
 
-        <main role="main">
-            <article id="content">
-                <div id="description">
-                    <h2>What is TTSProjection?</h2>
-                    <div class="indent">
-                        <p>TTSProjection is a projection mapping software for flat surfaces created by Toka.</p>
-                        <p>Research Project in FY30</p>
-                        <p>Official name: Tamura Tokai Sibuya Projection</p>
-                        <p><img src="../img/normal.png" alt="normal.png"></p>
-                    </div>
-                </div>
-                <div id="work">
-                    <h3>Main Functions</h3>
-                    <ul class="clause">
-                        <li>Playback of multiple images and videos</li>
-                        <li>Display of analog and digital clocks</li>
-                        <li>Accurate media control by program list</li>
-                    </ul>
-                    <h3>Description of each mode</h3>
-                    <ul>
-                        <li>Normal mode (normal)</li>
-                        <p>Displays images or videos as they are.</p>
-                        <p>It is also possible to display nothing for a certain period of time.</p>
-                        <li>Clock mode (clock)</li>
-                        <p>Displays a clock in front of the normal mode.</p>
-                        <P>Clock can be drawn programmatically without using images or videos</p>
-                        <p>The clock ticks the current time exactly!</p>
-                        <li>Normal Plus Mode (normal+)</li>
-                        <p>Fade in/out, rotation, and other image and video movements</p>
-                        <li>Debug mode(debug)</li>
-                        <p>Mode to display test patterns. For adjusting the projector.</p>
-                    </ul>
-                </div>
-                <div id="howtouse">
-                    <h3>How to use</h3>
-                    <div>
-                        <ol>
-                            <li>Add photos, videos, etc. to<code>data/Media</code>Save photos, videos, etc. in</li>
-                            <li>
-                                <p>Set the order of playback, etc. in the program list.</p>
-                                <p>By default, the<code>data</code>in the<code>program.xml</code>in data.</p>
-                                <a href="program.html">For more information on how to edit the program list, click here!</a>
-                            </li>
-                            <li>Start the application.</li>
-                        </ol>
-                    </div>
-                    <h4>Cautions for use</h4>
-                    <div class="indent">
-                        <p>If the program is saved on a removable disk, copy it to the desktop and use it.</p>
-                        <p>*If you start the application from a removable disk, it may not work properly.</p>
-                        <p>If the operation is not stable, it may be improved by reducing the video quality.</p>
-                    </div>
-                </div>
-                <div id="changelog">
-                    <h3>Update History</h3>
-                    <div class="indent">
-                        <p><span style="font-size: large;font-weight: bold">Latest Version</span> -Ver.1.5.1</p>
-                        <p><a href="changelogs.html">View past update history</a></p>
-                    </div>
-                </div>
-                <div id="download">
-                    <h3>Download</h3>
-                    <div class="indent">
-                        <h4>Requirements</h4>
-                        <p>Can run on environments that support java 8</p>
-                        <p><a href="download.html">Click here to download</a></p>
-                    </div>
-                </div>
-            </article>
-        </main>
+        display: grid;
+        grid-auto-rows: 3rem 1fr;
+      }
 
-        <footer id="footer" role="contentinfo">
-            <div>
-                <nav>
-                    <span><a href="sitemap.html">Page List</a></span>
-                    <span>
-                        <a href="#" onclick="$('body').animatescroll();">
-                            Return to top of page
-                        </a>
-                    </span>
-                </nav>
+      .welcome {
+        height: 100%;
+        display: grid;
+        grid-row: 2;
+        display: none;
+      }
+
+      .welcome-container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .start-actions {
+        display: grid;
+        grid-gap: 1rem;
+        padding: 1rem;
+      }
+
+      .action-btn {
+        background: green;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+      }
+
+      .action-title {
+        font-size: large;
+      }
+
+      /* div.content {
+        display: none;
+      } */
+    </style>
+    <div class="welcome">
+      <div class="welcome-container">
+        <div class="welcome-about">
+          <div class="guidance-text">Welcome to Manifest Generator!</div>
+        </div>
+        <div class="start-actions">
+          <div class="action-item quick-start">
+            <!-- 簡単作成 -->
+            <label class="invisible_Control">
+              <input type="button" value="" id="create-quick-btn">
+              <div class="action-btn">
+                <div class="action-title">Easy to create</div>
+                <div class="action-description">Simple editor for easy creation! Just a few settings</div>
+              </div>
+            </label>
+          </div>
+          <div class="action-item edit-start">
+            <!-- 詳細 -->
+            <label class="invisible_Control">
+              <input type="button" value="" id="create-new-btn">
+              <div class="action-btn">
+
+                <div class="action-title">Create New</div>
+                <div class="action-description">Create manifest.json from scratch</div>
+              </div>
+            </label>
+          </div>
+          <div class="action-item file-start">
+            <!-- ファイル開く -->
+            <label class="invisible_Control">
+              <input type="button" value="" id="open-file-btn">
+              <div class="action-btn">
+                <div class="action-title">Open File</div>
+                <div class="action-description">Open the already existing manifest.json</div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="editor">
+        <form name="editor_common">
+          <div class="editor-element">
+            <div class="editor-element-legend">
+              <p>Editor Options</p>
             </div>
-            <span id="copyright"><a href="https://twitter.com/kmad1008">&copy;2018 Tokasan</a></span>
-        </footer>
-    </body>
+            <div class="value-element" title="Make the editor a simple editor.">
+              <div class="value-toggle">
+                <input type="checkbox" name="control_simple" id="control_simple" class="invisible_Control" ui>
+                <label for="control_simple" class="toggle-body">
+                  <p class="toggle_body_text">Simple Editor</p>
+                  <div class="toggle_body_box">
+                    <div class="toggle_body_padding"></div>
+                    <div class="toggle_body_thumb"></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="value-element" title="Remove newlines and whitespace and reduce the size.">
+              <div class="value-toggle">
+                <input type="checkbox" name="control_compact" id="control_compact" class="invisible_Control" ui>
+                <label for="control_compact" class="toggle-body">
+                  <p class="toggle_body_text">JSON Minimize</p>
+                  <div class="toggle_body_box">
+                    <div class="toggle_body_padding"></div>
+                    <div class="toggle_body_thumb"></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="editor_element_group editor_normal_mode">
+            <div class="editor-element">
+              <div class="editor-element-legend">
+                <p>Definition</p>
+              </div>
+              <div class="value-element" title="Set the format version of this manifest.json..jsonのフォーマットバージョンを設定します。">
+                <div class="value-label">
+                  <label for="format_version">Format Version</label>
+                </div>
+                <div class="value-input">
+                  <select name="format_version" id="format_version">
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element">
+              <div class="editor-element-legend">
+                <p>Header</p>
+              </div>
+              <div class="value-element" title="Set the name of this pack.">
+                <div class="value-label">
+                  <label for="header_pack_name">Name</label>
+                </div>
+                <div class="value-input">
+                  <input type="text" name="pack_name" id="header_pack_name">
+                </div>
+              </div>
+              <div class="value-element" title="Sets the description of this pack.">
+                <div class="value-label">
+                  <label for="header_description">Description</label>
+                </div>
+                <div class="value-input">
+                  <textarea type="text" name="description" id="header_description"></textarea>
+                </div>
+              </div>
+              <div class="value-element" title="Indicates the version of this pack.">
+                <div class="value-label">
+                  <label for="header_version_major">Version</label>
+                </div>
+                <div class="value-input type-version">
+                  <label><input type="number" min="0" name="" id="header_version_major" value="1"></label>
+                  <span>.</span>
+                  <label><input type="number" min="0" name="" id="header_version_minor" value="0"></label>
+                  <span>.</span>
+                  <label><input type="number" min="0" name="" id="header_version_patch" value="0"></label>
+                </div>
+              </div>
+              <div class="value-element" title="Sets the minimum version of Minecraft (the version this pack was created with) that this pack will run on.">
+                <div class="value-label">
+                  <label id="header_min_engine_version" for="header_min_engine_version_major">Minimum Engine Version</label>
+                </div>
+                <div class="value-input type-version" id="header_min_engine_version_input">
+                  <label><input type="number" min="0" name="" id="header_min_engine_version_major" value="1"></label>
+                  <span>.</span>
+                  <label><input type="number" min="0" name="" id="header_min_engine_version_minor" value="13"></label>
+                  <span>.</span>
+                  <label><input type="number" min="0" name="" id="header_min_engine_version_patch" value="0"></label>
+                </div>
+              </div>
+              <div class="value-element" title="Sets the UUID for this pack.">
+                <div class="value-label">
+                  <label for="header_uuid">UUID</label>
+                </div>
+                <div class="value-input type-uuid">
+                  <label><input type="text" name="uuid" id="header_uuid"></label>
+                  <label>
+                    <input type="button" value="Generate" class="generate_uuid" id="header_uuid_generate">
+                  </label>
+                </div>
+              </div>
+              <div class="value-element" title="Disable this pack for multi-platform environments.">
+                <div class="value-checkbox">
+                  <input type="checkbox" name="header_platform_locked" id="header_platform_locked" class="invisible_Control">
+                  <label for="header_platform_locked" class="checkbox-body">
+                    <div class="checkbox-body-box">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="checkbox-body-checkMark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    <p class="checkbox-body-text">Platform Lock</p>
+                  </label>
+                </div>
+              </div>
+              <div class="value-element" title="Sets the created version of this pack world.">
+                <div class="value-label">
+                  <label id="header_base_game_version" for="header_base_game_version_major">Base game version</label>
+                </div>
+                <div class="value-input type-version" id="header_base_game_version_input">
+                  <label><input type="number" min="0" name="" id="header_base_game_version_major" value="1" disabled></label>
+                  <span>.</span>
+                  <label><input type="number" min="0" name="" id="header_base_game_version_minor" value="13" disabled></label>
+                  <span>.</span>
+                  <label><input type="number" min="0" name="" id="header_base_game_version_patch" value="0" disabled></label>
+                </div>
+              </div>
+              <div class="value-element" title="Locks the world settings when deploying world templates.">
+                <div class="value-checkbox">
+                  <input type="checkbox" name="header_lock_template_options" id="header_lock_template_options" class="invisible_Control" disabled>
+                  <label for="header_lock_template_options" class="checkbox-body">
+                    <div class="checkbox-body-box">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="checkbox-body-checkMark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    <p class="checkbox-body-text">Template Option Lock</p>
+                  </label>
+                </div>
+              </div>
+              <div class="value-element" title="Restrict the introduction screen.">
+                <div class="value-label">
+                  <label id="header_pack_scope_label" for="header_pack_scope">Pack Scope</label>
+                </div>
+                <div class="value-input">
+                  <select name="header_pack_scope" id="header_pack_scope">
+                    <option value="none">none</option>
+                    <option value="global">Global</option>
+                    <option value="world">World</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element" title="Sets which modules the pack containing this manifest will use.">
+              <div class="editor-element-legend">
+                <p>Modules</p>
+              </div>
+              <div class="modules tab_contents">
+                <div class="modules tab-controls">
+                  <div class="modules tab-body" title="If there is more than one module to edit, switch between them.">
+                    <label class="modules tab-children invisible_Control selected">
+                      <input type="button" class="modules" ui>
+                      <div class="tab-number">0</div>
+                      <div class="tab-underBar"></div>
+                    </label>
+                  </div>
+                  <div class="modules add-tab disabled">
+                    <label class="invisible_Control" title="Adds a module.">
+                      <input type="button" id="modules_add" class="modules" disabled>
+                      <div class="add-tab-text">+ Add</div>
+                    </label>
+                  </div>
+                  <div class="modules remove-tab disabled">
+                    <label class="invisible_Control" title="Deletes the selected module.">
+                      <input type="button" id="modules-delete" class="modules" disabled>
+                      <div class="remove-tab-text">- Remove</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="modules tab-content-list">
+                  <div class="selected-tab-content">
+                    <div class="value-element" title="Sets the type of this module.">
+                      <div class="value-label">
+                        <label for="modules_type">Type</label>
+                      </div>
+                      <div class="value-input">
+                        <select name="modules_type" id="modules_type" required>
+                          <option value="data">data</option>
+                          <option value="resources">resources</option>
+                          <option value="client_data">client_data</option>
+                          <option value="script">script</option>
+                          <option value="interface">interface</option>
+                          <option value="world_template">world_template</option>
+                          <option value="skin_pack">skin_pack</option>
+                          <option value="javascript">javascript(~1.18.x)</option>
+                          <option value="plugin">plugin(~1.16.x)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the description of this module.">
+                      <div class="value-label">
+                        <label for="modules_description">Description</label>
+                      </div>
+                      <div class="value-input">
+                        <textarea type="text" name="description" id="modules_description"></textarea>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the version of this module.">
+                      <div class="value-label">
+                        <label for="modules_version_major">Version</label>
+                      </div>
+                      <div class="value-input type-version">
+                        <label><input type="number" min="0" name="" id="modules_version_major" value="1"></label>
+                        <span>.</span>
+                        <label><input type="number" min="0" name="" id="modules_version_minor" value="0"></label>
+                        <span>.</span>
+                        <label><input type="number" min="0" name="" id="modules_version_patch" value="0"></label>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the UUID for this module.">
+                      <div class="value-label">
+                        <label for="modules_uuid">UUID</label>
+                      </div>
+                      <div class="value-input type-uuid">
+                        <label><input type="text" name="uuid" id="modules_uuid"></label>
+                        <label><input type="button" value="Generate" class="generate_uuid"></label>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the script language.">
+                      <div class="value-label">
+                        <label for="modules_language" id="modules_language_label">Language</label>
+                      </div>
+                      <div class="value-input">
+                        <select name="modules_language" id="modules_language">
+                          <option value="javascript" selected>javascript</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the script primary file.">
+                      <div class="value-label">
+                        <label for="modules_entry" id="modules_entry_label">Entry</label>
+                      </div>
+                      <div class="value-input">
+                        <input type="text" name="pack_name" id="modules_entry">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element" title="Sets dependencies. If a dependency pack exists, it will be installed at the same time as the dependency pack.">
+              <div class="editor-element-legend toggle">
+                <input type="checkbox" name="dependencies" id="dependencies_enable" class="invisible_Control">
+                <label for="dependencies_enable" class="toggle-body">
+                  <p class="toggle_body_text">Dependencies</p>
+                  <div class="toggle_body_box">
+                    <div class="toggle_body_padding"></div>
+                    <div class="toggle_body_thumb"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="dependencies tab_contents">
+                <div class="dependencies tab-controls">
+                  <div class="dependencies tab-body" title="If there are multiple dependencies to edit, switch between them.">
+                    <label class="dependencies tab-children invisible_Control selected">
+                      <input type="button" class="dependencies" ui>
+                      <div class="tab-number">0</div>
+                      <div class="tab-underBar"></div>
+                    </label>
+                  </div>
+                  <div class="dependencies add-tab disabled" title="Add a dependent pack.">
+                    <label class="invisible_Control">
+                      <input type="button" id="dependencies_add" class="dependencies" disabled>
+                      <div class="add-tab-text">+ Add</div>
+                    </label>
+                  </div>
+                  <div class="dependencies remove-tab disabled" title="Deletes the selected pack.">
+                    <label class="invisible_Control">
+                      <input type="button" id="dependencies-delete" class="dependencies" disabled>
+                      <div class="remove-tab-text">- Remove</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="dependencies tab-content-list">
+                  <div class="selected-tab-content">
+                    <div class="value-element" title="Sets the UUID of the dependent pack.">
+                      <div class="value-label">
+                        <label for="dependencies_uuid">UUID</label>
+                      </div>
+                      <div class="value-input">
+                        <input type="text" name="uuid" id="dependencies_uuid" disabled>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the version of the dependent pack.">
+                      <div class="value-label">
+                        <label for="dependencies_version_major">Version</label>
+                      </div>
+                      <div class="value-input type-version">
+                        <label><input type="number" min="0" name="" id="dependencies_version_major" value="1" disabled></label>
+                        <span>.</span>
+                        <label><input type="number" min="0" name="" id="dependencies_version_minor" value="0" disabled></label>
+                        <span>.</span>
+                        <label><input type="number" min="0" name="" id="dependencies_version_patch" value="0" disabled></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element" title="{{page.editor.capabilities.title=page.editor.capabilities.}}">
+              <div class="editor-element-legend toggle">
+                <input type="checkbox" name="capabilities" id="capabilities_enable" class="invisible_Control">
+                <label for="capabilities_enable" class="toggle-body">
+                  <p class="toggle_body_text">Capabilities</p>
+                  <div class="toggle_body_box">
+                    <div class="toggle_body_padding"></div>
+                    <div class="toggle_body_thumb"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="capabilities_list" title="Enables additional features in this pack.">
+                <div class="value-element" title="Enable custom UI features.">
+                  <div class="value-checkbox">
+                    <input type="checkbox" name="experimental_custom_ui" id="experimental_custom_ui" class="invisible_Control" disabled>
+                    <label for="experimental_custom_ui" class="checkbox-body">
+                      <div class="checkbox-body-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="checkbox-body-checkMark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <p class="checkbox-body-text">experimental_<wbr>custom_ui</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="value-element" title="Enables additions and changes to Education Chemistry features.">
+                  <div class="value-checkbox">
+                    <input type="checkbox" name="chemistry" id="chemistry" class="invisible_Control" disabled>
+                    <label for="chemistry" class="checkbox-body">
+                      <div class="checkbox-body-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="checkbox-body-checkMark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <p class="checkbox-body-text">chemistry</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="value-element" title="Enables ray tracing features in the pack. (1.15.x and above)">
+                  <div class="value-checkbox">
+                    <input type="checkbox" name="raytracing" id="raytracing" class="invisible_Control" disabled>
+                    <label for="raytracing" class="checkbox-body">
+                      <div class="checkbox-body-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="checkbox-body-checkMark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <p class="checkbox-body-text">raytracing</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element" title="Information about the creator. Does not affect gameplay.">
+              <div class="editor-element-legend toggle">
+                <input type="checkbox" name="metadata" id="metadata_enable" class="invisible_Control">
+                <label for="metadata_enable" class="toggle-body">
+                  <p class="toggle_body_text">Metadata</p>
+                  <div class="toggle_body_box">
+                    <div class="toggle_body_padding"></div>
+                    <div class="toggle_body_thumb"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="metadata_list">
+                <div class="value-element" title="Sets the author of this pack. Multiple authors can be added.">
+                  <div class="value-label">
+                    <label for="metadata_author">Author</label>
+                  </div>
+                  <div class="value-input type_authors">
+                    <div class="authors_list">
+                    </div>
+                    <div class="authors_list_control" title="Add author input field.">
+                      <div class="add_author">
+                        <input type="button" id="author-add" class="invisible_Control" disabled>
+                        <label for="author-add">
+                          <div class="add_author_text">+ Add author</div>
+                        </label>
+                      </div>
+                      <div class="remove_author" title="Delete the author input field.">
+                        <input type="button" id="author-delete" class="invisible_Control" disabled>
+                        <label for="author-delete">
+                          <div class="remove_author_text">- Remove author</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="value-element" title="Set the homepage URL for this pack.">
+                  <div class="value-label">
+                    <label for="metadata_url">URL</label>
+                  </div>
+                  <div class="value-input">
+                    <input type="url" name="metadata_url" id="metadata_url" disabled>
+                  </div>
+                </div>
+                <div class="value-element" title="Set the license for this pack.">
+                  <div class="value-label">
+                    <label for="metadata_license">License</label>
+                  </div>
+                  <div class="value-input">
+                    <input type="text" name="metadata_license" id="metadata_license" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element" title="Set the sub-pack function. This function allows you to switch contents on the add-on introduction screen.">
+              <div class="editor-element-legend toggle">
+                <input type="checkbox" name="subpacks" id="subpacks_enable" class="invisible_Control">
+                <label for="subpacks_enable" class="toggle-body">
+                  <p class="toggle_body_text">Subpacks</p>
+                  <div class="toggle_body_box">
+                    <div class="toggle_body_padding"></div>
+                    <div class="toggle_body_thumb"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="subpacks tab_contents">
+                <div class="subpacks tab-controls">
+                  <div class="subpacks tab-body" title="Switch if there are multiple subpacks to edit.">
+                    <label class="subpacks tab-children invisible_Control selected">
+                      <input type="button" class="subpacks" ui>
+                      <div class="tab-number">0</div>
+                      <div class="tab-underBar"></div>
+                    </label>
+                  </div>
+                  <div class="subpacks add-tab disabled" title="Add a folder of subpacks.">
+                    <label class="invisible_Control">
+                      <input type="button" id="subpacks_add" class="subpacks" disabled>
+                      <div class="add-tab-text">+ Add</div>
+                    </label>
+                  </div>
+                  <div class="subpacks remove-tab disabled" title="Deletes the selected subpack.">
+                    <label class="invisible_Control">
+                      <input type="button" id="subpacks-delete" class="subpacks" disabled>
+                      <div class="remove-tab-text">- Remove</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="subpacks tab-content-list">
+                  <div class="selected-tab-content">
+                    <div class="value-element" title="Specify a folder name for the subpack.">
+                      <div class="value-label">
+                        <label for="subpacks_folder_name">Folder Name</label>
+                      </div>
+                      <div class="value-input">
+                        <input type="text" name="uuid" id="subpacks_folder_name" disabled>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Sets the actual name of the subpack.">
+                      <div class="value-label">
+                        <label for="subpacks_name">Name</label>
+                      </div>
+                      <div class="value-input">
+                        <input type="text" name="uuid" id="subpacks_name" disabled>
+                      </div>
+                    </div>
+                    <div class="value-element" title="Memory usage for this subpack.">
+                      <div class="value-label">
+                        <label for="subpacks_memory_tier">Memory Tier</label>
+                      </div>
+                      <div class="value-input">
+                        <input type="number" min="0" name="subpacks_memory_tier" id="subpacks_memory_tier" value="0" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editor_element_group editor_simple_mode hide">
+            <div class="editor-element">
+              <div class="editor-element-legend">
+                <p>Usage</p>
+              </div>
+              <div class="simple_type_description_element">
+                <p>Select the use of this manifest.json.</p>
+              </div>
+              <div class="simple_radio_element">
+                <div class="simple_radio_child">
+                  <input type="radio" name="simple_type_child" id="simple_type_behavior" class="invisible_Control" value="behavior" checked>
+                  <label for="simple_type_behavior" class="simple_radio_child_label">
+                    <div class="simple_radio_child_img">
+                      <svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg">
+                        <path transform="matrix(.41314 0 0 .41314 .064696 .21613)" d="m9.4038 7.1619-4.437 2.5617-4.437-2.5617 3e-8 -5.1234 4.437-2.5617 4.437 2.5617z" fill="currentColor" />
+                      </svg>
+                    </div>
+                    <div class="simple_radio_child_text">
+                      <p>behavior pack</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="simple_radio_child">
+                  <input type="radio" name="simple_type_child" id="simple_type_texture" class="invisible_Control" value="texture">
+                  <label for="simple_type_texture" class="simple_radio_child_label">
+                    <div class="simple_radio_child_img">
+                      <svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m0.15798 0.025838c-0.073464-2.8023e-4 -0.13309 0.059345-0.13281 0.13281v3.916c-2.8038e-4 0.073464 0.059344 0.13309 0.13281 0.13281h3.9181c0.072655-8.58e-4 0.13077-0.060149 0.13074-0.13281v-3.916c2.817e-4 -0.07266-0.058086-0.13195-0.13074-0.13281h-1.9591zm0.13281 0.26355h3.6525v3.0339l-0.85369-1.4785c-0.023662-0.040977-0.067404-0.066198-0.11472-0.066146-0.047318-5.22e-5 -0.091061 0.025169-0.11472 0.066146l-0.77566 1.3436-0.50953-0.88315c-0.05086-0.088533-0.17858-0.088533-0.22944 0-0.31637 0.54595-0.62984 1.0936-0.94775 1.6387h-0.10697v-1.8262zm0.87126 0.24236c-0.28547 0.0073246-0.5178 0.24411-0.5178 0.53123 2e-8 0.29168 0.23955 0.53123 0.53123 0.53123 0.29168 0 0.53123-0.23955 0.53123-0.53123 0-0.29168-0.23955-0.53123-0.53123-0.53123-0.00456 0-0.0089-1.1626e-4 -0.013436 0zm0.013436 0.26562c0.14869-3e-8 0.26562 0.11693 0.26562 0.26562 0 0.14869-0.11693 0.26768-0.26562 0.26768-0.14869 0-0.26717-0.119-0.26717-0.26768 0-0.14869 0.11848-0.26562 0.26717-0.26562z"
+                              fill="currentColor" />
+                      </svg>
+                    </div>
+                    <div class="simple_radio_child_text">
+                      <p>resource pack</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="simple_radio_child">
+                  <input type="radio" name="simple_type_child" id="simple_type_world" class="invisible_Control" value="world">
+                  <label for="simple_type_world" class="simple_radio_child_label">
+                    <div class="simple_radio_child_img">
+                      <svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m2.3812 0.79375v0.52917h-0.26458v0.52917h0.52917v0.79375h-1.0583v-0.26458h-0.52917v-0.26458h-0.26458v-0.26458h-0.52917v2.1167h3.7042v-1.5875h-0.79375v0.26458h-0.26458v-0.79375h0.52917v-0.52917h-0.26458v-0.52917h-0.79375z" fill="currentColor" />
+                      </svg>
+                    </div>
+                    <div class="simple_radio_child_text">
+                      <p>world template</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="simple_radio_child">
+                  <input type="radio" name="simple_type_child" id="simple_type_skin" class="invisible_Control" value="skin">
+                  <label for="simple_type_skin" class="simple_radio_child_label">
+                    <div class="simple_radio_child_img">
+                      <svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m1.6536 0.066146v4.101h0.92604v-4.101h-0.92604zm0.92604 0.93689c0.014814 0.52899 0.029628 1.058 0.044442 1.587 0.13212-0.00362 0.26424-0.00723 0.39636-0.010852-0.014642-0.52899-0.029283-1.058-0.043925-1.587-0.13229 0.00362-0.26458 0.00723-0.39688 0.010852zm-0.92604 0c-0.13229-0.0036174-0.26458-0.0072347-0.39688-0.010852-0.014642 0.52899-0.029283 1.058-0.043925 1.587 0.13212 0.00362 0.26424 0.00723 0.39636 0.010852 0.014814-0.52899 0.029628-1.058 0.044442-1.587z"
+                              fill="currentColor" />
+                      </svg>
+                    </div>
+                    <div class="simple_radio_child_text">
+                      <p>skin pack</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="editor-element">
+              <div class="editor-element-legend">
+                <p><label for="simple_pack_name">Pack Name</label></p>
+              </div>
+              <div class="simple_type_description_element">
+                <p>Set the name of the pack. The name you set will be displayed on the management screen, etc.</p>
+              </div>
+              <div class="simple_value_element" title="Sets the name of this pack.">
+                <div class="value-input">
+                  <input type="text" name="pack_name" id="simple_pack_name" placeholder="Enter pack name">
+                </div>
+              </div>
+            </div>
+            <div class="editor-element">
+              <div class="editor-element-legend">
+                <p><label for="simple_description">Pack Description</label></p>
+              </div>
+              <div class="simple_type_description_element">
+                <p>Set a description for this pack. The description you set will be displayed on the administration page, etc.</p>
+              </div>
+              <div class="simple_value_element" title="Sets the description of this pack.">
+                <div class="value-input">
+                  <textarea type="text" name="description" id="simple_description" placeholder="Enter description"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="separator"></div>
+      <div class="data_check">
+        <div class="preview">
+          <div class="preview_control_bar">
+            <div class="preview_control_child copy" title="Copy the json to the clipboard.">
+              <input type="button" id="control_copy" class="invisible_Control" ui>
+              <label for="control_copy" class="control_text">
+                <p id="control_copy_text">Copy</p>
+              </label>
+            </div>
+            <div class="preview_control_child" title="Download manifest.json.">
+              <input type="button" id="control_download" class="invisible_Control" ui>
+              <label for="control_download" class="control_text">
+                <p>Download</p>
+              </label>
+            </div>
+            <div class="preview_control_child save disabled" title="Save manifest.json. Ctrl+S">
+              <input type="button" id="control_save" class="invisible_Control" ui>
+              <label for="control_save" class="control_text">
+                <p><span id="save_text">Save</span><span id="edit_state">*</span></p>
+              </label>
+            </div>
+          </div>
+          <div class="display_preview">
+            <div class="preview_header">
+              <span>Minecraft Preview</span>
+            </div>
+            <div class="preview-toggle">
+              <input type="button" id="toggle-preview" class="invisible_Control" ui>
+              <label for="toggle-preview" class="preview-toggle-label">
+                <div class="preview-toggle-text">💎</div>
+              </label>
+            </div>
+            <!-- <div class="display-preview-card">
+              <div class="card-icon">
+                <img src="../img/icon.svg" alt="" width="64px" height="64px">
+              </div>
+              <div class="card-text">
+                <p id="card-title" class="mcf-text"></p>
+                <p id="card-description" class="mcf-text"></p>
+              </div>
+            </div> -->
+            <style>
+              /* todo:
+              複数パック導入した際の移動再現
+              優先度移動のときはdescriptionを閉じる
+              description何行でもOK,スペース強制1つ,スペースで折り返し,\n使用不可
+
+               */
+              :root {
+                --border-width: 2px;
+                --border-width_alt: -2px;
+              }
+
+              .preview-card.hide {
+                display: none;
+              }
+
+              .preview-ore-ui-card {
+                font-family: Arial, Helvetica, sans-serif;
+                display: grid;
+                background-color: #48494a;
+                padding: 1rem;
+                user-select: none;
+                border-radius: 0.2rem;
+                overflow-x: auto;
+              }
+
+              .preview-ore-ui-card.hide {
+                display: none;
+              }
+
+              .ore-ui-frame {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr 5rem;
+                background-color: #313233;
+                color: #b1b2b5;
+                border-style: solid;
+                border: solid var(--border-width) #1e1e1f;
+              }
+
+              .ore-ui-frame:not(:first-child) {
+                grid-template-columns: 1fr;
+                border-top: none;
+              }
+
+              .ore-ui-accordion-body {
+                display: grid;
+                font-size: large;
+                color: white;
+                background-color: #48494a;
+                /* padding: 1.6rem; */
+                box-shadow: inset var(--border-width_alt) 0 0 #373737,
+                  inset var(--border-width) 0 0 rgba(255, 255, 255, 0.1),
+                  inset 0 var(--border-width) 0 rgba(255, 255, 255, 0.1),
+                  inset 0 var(--border-width_alt) 0 #373737;
+                padding: .5rem;
+              }
+
+
+              .ore-ui-accordion-body:hover {
+                background-color: #696969;
+                border-left-color: #7f7f7f;
+                border-right-color: #7f7f7f;
+                border-top-color: #7f7f7f;
+                color: #ffffff;
+                cursor: pointer;
+              }
+
+              .ore-ui-accordion-body:active {
+                background-color: transparent;
+              }
+
+              .ore-ui-accordion-body>label {
+                display: grid;
+                grid-gap: .5rem;
+                align-items: center;
+                grid-template-columns: auto 1fr auto;
+              }
+
+              .ore-ui-card-title {
+                /* min-width: 54rem; */
+                max-width: 70rem;
+                text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                line-height: 1;
+                overflow: hidden;
+              }
+
+              .ore-ui-card-icon,
+              .ore-ui-card-toggle,
+              .ore-ui-card-add {
+                aspect-ratio: 1/1;
+                width: 4rem;
+                height: 4rem;
+                display: grid;
+                justify-content: space-around;
+                align-items: center;
+                pointer-events: none;
+              }
+
+              .ore-ui-card-toggle img {
+                aspect-ratio: 1/1;
+                width: 1rem;
+                height: 1rem;
+                transform: scale(1, -1);
+              }
+
+              .ore-ui-card-toggle.close img {
+                transform: none;
+              }
+
+              .ore-ui-card-add img {
+                aspect-ratio: 1/1;
+                width: 2rem;
+                height: 2rem;
+              }
+
+              .ore-ui-card-description {
+                white-space: break-spaces;
+                overflow: hidden;
+                margin: 1rem;
+                color: white;
+              }
+
+              #preview-ore-ui-details {
+                max-height: 100vh;
+                transition: max-height 0.25s ease-in;
+              }
+
+
+              #preview-ore-ui-details.close {
+                max-height: 0;
+                border: none;
+              }
+
+              #preview-ore-ui-details.close div {
+                display: none;
+              }
+
+              /*  */
+              .display_preview {
+                display: grid;
+                grid-template-areas:
+                  "header toggle"
+                  "body body";
+              }
+
+              .preview_header {
+                grid-area: header;
+                justify-self: start;
+              }
+
+              .preview-toggle {
+                display: grid;
+                align-items: center;
+                justify-self: end;
+                aspect-ratio: 1;
+                border-radius: 0.3rem 0.3rem 0 0;
+                border: 3px solid var(--color-display-preview-background);
+                border-bottom: none;
+                user-select: none;
+                grid-area: toggle;
+                background: #48494a;
+                cursor: pointer;
+              }
+
+              .preview-toggle-label {
+                cursor: pointer;
+              }
+
+              .preview-toggle-text {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+              }
+
+              .display-preview-body {
+                grid-area: body;
+                border-radius: 0 0 0.3rem 0.3rem;
+                background: var(--color-display-preview-background);
+                padding: 0.2rem;
+              }
+            </style>
+            <div class="display-preview-body">
+              <div class="preview-card">
+                <div class="card-icon">
+                  <img src="../img/icon.svg" alt="" width="64px" height="64px">
+                </div>
+                <div class="card-text">
+                  <p id="card-title" class="mcf-text"></p>
+                  <p id="card-description" class="mcf-text"></p>
+                </div>
+              </div>
+              <div class="preview-ore-ui-card hide">
+                <div class="ore-ui-frame">
+                  <div class="ore-ui-accordion-body">
+                    <input type="button" id="preview-ore-ui-summary" class="invisible_Control" ui>
+                    <label for="preview-ore-ui-summary" class="">
+                      <div class="ore-ui-card-icon">
+                        <img src="../img/icon.svg" alt="" width="64px" height="64px">
+                      </div>
+                      <div class="ore-ui-card-title" id="ore-ui-card-title"></div>
+                      <div class="ore-ui-card-toggle" id="preview-ore-ui-toggle">
+                        <img src="../img/arrowUp.svg" alt="" width="64px" height="64px">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="ore-ui-accordion-body">
+                    <div class="ore-ui-card-add">
+                      <img src="../img/add.svg" alt="" width="64px" height="64px">
+                    </div>
+                  </div>
+                </div>
+                <div class="ore-ui-frame" id="preview-ore-ui-details">
+                  <div class="ore-ui-card-description" id="ore-ui-card-description"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            const summary = document.getElementById("preview-ore-ui-summary");
+            // console.log(summary);
+            let key = [{
+              height: "3.5rem",
+              opacity: 1
+            },
+            {
+              height: 0,
+              opacity: 0
+            }];
+            summary.addEventListener('click', event => {
+              document.getElementById("preview-ore-ui-toggle").classList.toggle("close");
+              const details = document.getElementById("preview-ore-ui-details");
+              details.classList.toggle("close");
+              // details.animate(
+              //   key,
+              //   {
+              //     fill: "both",
+              //     duration: 1000,
+              //     direction: 'alternate'
+              //   });
+              // key.reverse();
+            });
+            let btn_anim = new Animation(new KeyframeEffect(
+              document.getElementsByClassName("preview-toggle-text")[0],
+              [
+                { transform: 'rotate(0deg)' },
+                { transform: 'rotate(180deg)' },
+                { transform: 'rotate(360deg)' }
+              ],
+              { duration: 500, direction: 'alternate', easing: 'ease' }
+            ));
+            document.getElementById("toggle-preview").addEventListener("click", (ev) => {
+              document.getElementsByClassName("preview-ore-ui-card")[0].classList.toggle("hide");
+              document.getElementsByClassName("preview-card")[0].classList.toggle("hide");
+              is_ore_ui = !is_ore_ui;
+              btn_anim.play();
+            })
+          </script>
+          <div class="code-preview">
+            <div class="preview_header">
+              <span>Code</span>
+            </div>
+            <pre class="language-json">
+              <code class="language-json"></code>
+            </pre>
+          </div>
+        </div>
+        <div class="issue">
+          <input type="checkbox" name="issue-control" id="issue-control" class="invisible_Control" ui>
+          <label for="issue-control" class="issue-status-bar">
+            <div class="issue-status-label">
+              <svg xmlns="http://www.w3.org/2000/svg" class="close" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6">
+              </svg>
+              <span>Issue</span>
+            </div>
+            <div class="issue-status-num">
+              <div class="issue-status-warning">
+                <img src="../img/warning.svg" alt="" width="19px" height="19px">
+                <div>Warning:<span class="issue-warning-num">0</span></div>
+              </div>
+              <div class="issue-status-error">
+                <img src="../img/error.svg" alt="" width="19px" height="19px">
+                <div>Error::<span class="issue-error-num">0</span></div>
+              </div>
+            </div>
+          </label>
+          <div class="issue_content" style="display: none;">
+            <ul class="issue-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="unsupported">
+      <p>Not available in your browser (Internet Explorer).</p>
+      <p>Please use Chrome, <a href="microsoft-edge:https://toka7290.github.io/MCAddonSetupManager/" target="_blank" rel="noopener noreferrer">Edge</a>, Firefox,Safari</p>
+    </div>
+    <!-- sw -->
+    <script>
+      if ("serviceWorker" in navigator && location.protocol == "https:") {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/MCAddonSetupManager/serviceworker.js", {
+              scope: "/MCAddonSetupManager/",
+            })
+            .then(function (registration) {
+              // registration worked
+              registration.onupdatefound = function () {
+                registration.update();
+              };
+            })
+            .catch(function (error) {
+              // registration failed
+              console.error("serviceWorker failed :", error);
+            });
+        });
+      }
+      let deferredPrompt;
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+      });
+    </script>
+    <!-- lib -->
+    <script src="../lib/jquery-3.6.0.min.js" defer></script>
+    <script src="../lib/prism.js" defer></script>
+    <script src="../lib/mc_format.min.js" defer></script>
+    <!-- js -->
+    <script type="text/javascript" src="../js/main.js" defer></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-MEW7Y56GND"></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-MEW7Y56GND');
+    </script>
+  </body>
 
 </html>
