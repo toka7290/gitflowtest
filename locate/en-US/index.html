@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
     <meta charset="UTF-8">
-    <title>{{page.header.title}}</title>
+    <title>Manifest Generator - TokaTools</title>
     <!-- metadata -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="manifest.json,manifest,Manifest,マニフェスト,Generator,generator,Minecraft,minecraft,マインクラフト,BE,Bedrock Edition,bedrock,tool,ツール,Addon,Add-on,アドオン,resource,behavior,subpacks,metadata,dependencies,modules,capabilities,とかさん">
-    <meta name="Description" content="{{page.header.description}}">
+    <meta name="Description" content="Add-on creation aid for Minecraft Bedrock Edition. Edit, convert, generate, and preview manifest.json easily and conveniently. Full support for resource packs, behavior packs, world templates, and everything in between! Easy editing of decorative text with preview display function!">
     <meta http-equiv="content-language" content="ja">
     <meta name="theme-color" content="#60ad5e" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <meta property="og:url" content="https://toka7290.github.io/MCAddonSetupManager/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{page.header.og_site_name}}">
-    <meta property="og:title" content="{{page.header.og_title}}">
-    <meta property="og:description" content="{{page.header.og_description}}">
+    <meta property="og:site_name" content="Manifest Generator">
+    <meta property="og:title" content="Manifest Generator">
+    <meta property="og:description" content="Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.">
     <meta property="og:image" content="https://toka7290.github.io/MCAddonSetupManager/img/icon_2000.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@toka7290">
     <meta name="google-site-verification" content="Gvi-XrJEZRsxJgsNLv5NOddbD6COJo804pUgyPvpi34">
     <!-- css -->
-    <link rel="preload" href="../css/style.min.css" as="style">
-    <link rel="stylesheet" href="../css/color.min.css" async>
-    <link rel="stylesheet" href="../css/style.min.css" async>
-    <link rel="stylesheet" href="../css/prism.min.css" async defer>
-    <link rel="stylesheet" href="../css/mc_format.min.css" async defer>
-    <link rel="stylesheet" href="../css/phone.min.css" media="(max-width: 59rem)" async>
+    <link rel="preload" href="./../css/style.min.css" as="style">
+    <link rel="stylesheet" href="./../css/color.min.css" async>
+    <link rel="stylesheet" href="./../css/style.min.css" async>
+    <link rel="stylesheet" href="./../css/prism.min.css" async defer>
+    <link rel="stylesheet" href="./../css/mc_format.min.css" async defer>
+    <link rel="stylesheet" href="./../css/phone.min.css" media="(max-width: 59rem)" async>
     <!-- icon etc -->
     <link rel="apple-touch-icon" href="../img/icon_apple-touch-icon.png">
     <link rel="icon" href="../img/icon.webp">
-    <link rel="manifest" href="../json/webapp.webmanifest">
+    <link rel="manifest" href="./json/webapp.webmanifest">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -38,7 +38,7 @@
         "name": "Manifest Generator",
         "browserRequirements": "requires HTML5 support",
         "image": "../img/icon_2000.png",
-        "about": "{{page.header.json_ld.about}}",
+        "about": "Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -57,7 +57,7 @@
         "operatingSystem": "Any. It is a Web Application",
         "creator": {
           "@type": "Person",
-          "name": "とかさん",
+          "name": "toka-san",
           "url": "http://tokamcwin10.blog.jp/"
         }
       }
@@ -71,32 +71,32 @@
           <img src="../img/icon.svg" alt="" height="32px" width="32px">
         </div>
         <div class="title">
-          <h1>{{page.content.header.title}}</h1>
+          <h1>Manifest Generator</h1>
           <p>version: 1.8.0</p>
         </div>
         <div class="header-menu">
           <div class="menu_button file_load_button disabled">
-            <label for="load_file">{{page.content.header.header_menu.file_load}}</label>
+            <label for="load_file">Load</label>
           </div>
           <div class="menu_button import_button">
-            <label for="input-file">{{page.content.header.header_menu.import}}</label>
+            <label for="input-file">Import</label>
           </div>
           <div class="help-content top" id="help-content-1">
-            <p>{{page.help.1}}</p>
+            <p>Loads a file</p>
           </div>
           <div class="menu_button" id="show-preview">
-            <span>{{page.content.header.header_menu.show_preview}}</span>
+            <span>Preview</span>
             <div class="help-content top" id="help-content-3">
               <p>
-                {{page.help.3}}
+                Actual display of entered and edited data, json viewing and downloading/copying.
               </p>
             </div>
           </div>
           <div class="menu_button">
-            <p id="show_help">{{page.content.header.header_menu.show_help}}</p>
+            <p id="show_help">help</p>
           </div>
           <div class="menu_button">
-            <label for="open-about">{{page.content.header.header_menu.about}}</label>
+            <label for="open-about">About</label>
           </div>
         </div>
         <div class="header-menu-alt">
@@ -107,14 +107,14 @@
                 <path d="M13 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V9l-7-7z" />
                 <path d="M13 3v6h6" />
               </svg>
-              <p>{{page.content.header.header_menu_alt.file_load}}</p>
+              <p>Open</p>
             </label>
           </div>
           <div class="alt_menu_button import_button">
             <input type="file" name="input-file" id="input-file" accept=".json" class="invisible_Control">
             <label for="input-file" class="alt_menu_button_label">
               <img src="../img/import.svg" alt="import" width="32px" height="32px">
-              <p>{{page.content.header.header_menu_alt.import}}</p>
+              <p>Import</p>
             </label>
           </div>
           <details class="open-more-info">
@@ -122,39 +122,39 @@
             <ul class="more-info">
               <li>
                 <a href="https://toka7290.github.io/TokaTools/" target="_blank" title="TokaTools" rel="noopener noreferrer"><img src="../icons/TokaTools.svg" alt="" width="32px" height="32px">
-                  <p>{{page.content.header.more-info.toka_tools}}</p>
+                  <p>TokaTools</p>
                 </a>
               </li>
               <li>
                 <a href="https://tokamcwin10.blog.jp/" target="_blank" title="とかさんのブログ" rel="noopener noreferrer"><img src="../img/homepage.svg" alt="" width="32px" height="32px">
-                  <p>{{page.content.header.more-info.homepage}}</p>
+                  <p>Homepage</p>
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/toka7290" target="_blank" title="Twitter" rel="noopener noreferrer"><img src="../img/twitter.svg" alt="" width="32px" height="32px">
-                  <p>{{page.content.header.more-info.twitter}}</p>
+                  <p>Twitter</p>
                 </a>
               </li>
               <li>
                 <a href="https://github.com/toka7290/MCAddonSetupManager" target="_blank" title="Github" rel="noopener noreferrer"><img src="../img/github.svg" alt="" width="32px" height="32px">
-                  <p>{{page.content.header.more-info.git_hub}}</p>
+                  <p>GitHub</p>
                 </a>
               </li>
               <li>
                 <a href="https://tokamcwin10.blog.jp/article-38495158" target="_blank" title="manifest.jsonの解説ページに飛びます。" rel="noopener noreferrer"><img src="../img/help.svg" alt="" width="32px" height="32px">
-                  <p>{{page.content.header.more-info.manifest_help}}</p>
+                  <p>Manifest Help</p>
                 </a>
               </li>
               <li>
                 <a href="https://tokamcwin10.blog.jp/article-39181630" target="_blank" title="Subpacksの解説ページに飛びます。" rel="noopener noreferrer"><img src="../img/subpacks.svg" alt="" width="32px" height="32px">
-                  <p>{{page.content.header.more-info.subpacks_help}}</p>
+                  <p>Subpacks Help</p>
                 </a>
               </li>
               <li>
                 <input type="button" id="open-about" class="invisible_Control" ui>
                 <label class="open-about" for="open-about">
                   <img src="../img/icon.svg" alt="" height="32px" width="32px">
-                  <p>{{page.content.header.more-info.about}}</p>
+                  <p>about</p>
                 </label>
               </li>
             </ul>
@@ -173,20 +173,20 @@
           <div class="about-content">
             <img src="../img/icon.svg" alt="" width="180px" height="180px">
             <div class="about-title">
-              <h2><span class="sub_title">{{page.content.header.page_about.sub_title}}</span>{{page.content.header.page_about.title}}</h2>
+              <h2><span class="sub_title">TokaTools</span>Manifest Generator</h2>
               <p>version: 1.8.0</p>
             </div>
             <div class="about-description">
-              <p>{{page.content.header.page_about.about_description.1}}</p>
-              <p>{{page.content.header.page_about.about_description.2}}</p>
+              <p>Tool to generate manifest.json required by add-ons (resource packs, behavior packs, world templates, skin packs, etc.) in Minecraft Bedrock Edition (BE).</p>
+              <p>All functions are fully supported.</p>
             </div>
             <div class="about-external-link">
-              <a href="https://toka7290.github.io/TokaTools/" target="_blank" title="{{page.content.header.page_about.external_link.tokaTools}}" rel="noopener noreferrer"><img src="../icons/TokaTools.svg" alt="" width="32px" height="32px"></a>
-              <a href="https://tokamcwin10.blog.jp/" target="_blank" title="{{page.content.header.page_about.external_link.tokamcwin10}}" rel="noopener noreferrer"><img src="../img/homepage.svg" alt="" width="32px" height="32px"></a>
-              <a href="https://twitter.com/toka7290" target="_blank" title="{{page.content.header.page_about.external_link.twitter}}" rel="noopener noreferrer"><img src="../img/twitter.svg" alt="" width="32px" height="32px"></a>
-              <a href="https://github.com/toka7290/MCAddonSetupManager" target="_blank" title="{{page.content.header.page_about.external_link.github}}" rel="noopener noreferrer"><img src="../img/github.svg" alt="" width="32px" height="32px"></a>
-              <a href="https://tokamcwin10.blog.jp/article-38495158" target="_blank" title="{{page.content.header.page_about.external_link.38495158}}" rel="noopener noreferrer"><img src="../img/help.svg" alt="" width="32px" height="32px"></a>
-              <a href="https://tokamcwin10.blog.jp/article-39181630" target="_blank" title="{{page.content.header.page_about.external_link.39181630}}" rel="noopener noreferrer"><img src="../img/subpacks.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://toka7290.github.io/TokaTools/" target="_blank" title="TokaTools" rel="noopener noreferrer"><img src="../icons/TokaTools.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://tokamcwin10.blog.jp/" target="_blank" title="とかさんのブログ" rel="noopener noreferrer"><img src="../img/homepage.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://twitter.com/toka7290" target="_blank" title="Twitter" rel="noopener noreferrer"><img src="../img/twitter.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://github.com/toka7290/MCAddonSetupManager" target="_blank" title="Github" rel="noopener noreferrer"><img src="../img/github.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://tokamcwin10.blog.jp/article-38495158" target="_blank" title="manifest.jsonの解説ページに飛びます。" rel="noopener noreferrer"><img src="../img/help.svg" alt="" width="32px" height="32px"></a>
+              <a href="https://tokamcwin10.blog.jp/article-39181630" target="_blank" title="Subpacksの解説ページに飛びます。" rel="noopener noreferrer"><img src="../img/subpacks.svg" alt="" width="32px" height="32px"></a>
               <div class="share">
                 <input type="button" id="page-share" class="invisible_Control" ui>
                 <label for="page-share"><img src="../img/share.svg" alt="" width="32px" height="32px"></label>
@@ -200,13 +200,13 @@
       </div>
     </header>
     <div class="help-content bottom" id="help-content_2">
-      <p>{{page.help.2.1}}</p>
-      <p>{{page.help.2.2}}</p>
+      <p>Edit data</p>
+      <p>Errors, etc. can be seen in the Issues tab at the bottom.</p>
     </div>
     <div class="file-drop-zone hide">
       <div class="file-drop-zone-textarea">
         <img src="../img/import.svg" alt="import" width="50px" height="50px">
-        <p>ファイルをドロップして&NewLine;インポートします。</p>
+        <p>Drop and import files.</p>
       </div>
       <div class="file-drop-zone-pick">
       </div>
@@ -256,7 +256,7 @@
     <div class="welcome">
       <div class="welcome-container">
         <div class="welcome-about">
-          <div class="guidance-text">{{page.content.welcome.guidance_text}}</div>
+          <div class="guidance-text">Welcome to Manifest Generator!</div>
         </div>
         <div class="start-actions">
           <div class="action-item quick-start">
@@ -264,8 +264,8 @@
             <label class="invisible_Control">
               <input type="button" value="" id="create-quick-btn">
               <div class="action-btn">
-                <div class="action-title">{{page.content.welcome.quick_start.title}}</div>
-                <div class="action-description">{{page.content.welcome.quick_start.description}}</div>
+                <div class="action-title">Easy to create</div>
+                <div class="action-description">Simple editor for easy creation! Just a few settings</div>
               </div>
             </label>
           </div>
@@ -275,8 +275,8 @@
               <input type="button" value="" id="create-new-btn">
               <div class="action-btn">
 
-                <div class="action-title">{{page.content.welcome.edit_start.title}}</div>
-                <div class="action-description">{{page.content.welcome.edit_start.description}}</div>
+                <div class="action-title">Create New</div>
+                <div class="action-description">Create manifest.json from scratch</div>
               </div>
             </label>
           </div>
@@ -285,8 +285,8 @@
             <label class="invisible_Control">
               <input type="button" value="" id="open-file-btn">
               <div class="action-btn">
-                <div class="action-title">{{page.content.welcome.file_start.title}}</div>
-                <div class="action-description">{{page.content.welcome.file_start.description}}</div>
+                <div class="action-title">Open File</div>
+                <div class="action-description">Open the already existing manifest.json</div>
               </div>
             </label>
           </div>
@@ -298,13 +298,13 @@
         <form name="editor_common">
           <div class="editor-element">
             <div class="editor-element-legend">
-              <p>{{page.editor.option.legend}}</p>
+              <p>Editor Options</p>
             </div>
-            <div class="value-element" title="{{page.editor.option.control_simple.title}}">
+            <div class="value-element" title="Make the editor a simple editor.">
               <div class="value-toggle">
                 <input type="checkbox" name="control_simple" id="control_simple" class="invisible_Control" ui>
                 <label for="control_simple" class="toggle-body">
-                  <p class="toggle_body_text">{{page.editor.option.control_simple.text}}</p>
+                  <p class="toggle_body_text">Simple Editor</p>
                   <div class="toggle_body_box">
                     <div class="toggle_body_padding"></div>
                     <div class="toggle_body_thumb"></div>
@@ -312,11 +312,11 @@
                 </label>
               </div>
             </div>
-            <div class="value-element" title="{{page.editor.option.control_compact.title}}">
+            <div class="value-element" title="Remove newlines and whitespace and reduce the size.">
               <div class="value-toggle">
                 <input type="checkbox" name="control_compact" id="control_compact" class="invisible_Control" ui>
                 <label for="control_compact" class="toggle-body">
-                  <p class="toggle_body_text">{{page.editor.option.control_compact.text}}</p>
+                  <p class="toggle_body_text">JSON Minimize</p>
                   <div class="toggle_body_box">
                     <div class="toggle_body_padding"></div>
                     <div class="toggle_body_thumb"></div>
@@ -328,11 +328,11 @@
           <div class="editor_element_group editor_normal_mode">
             <div class="editor-element">
               <div class="editor-element-legend">
-                <p>{{page.editor.definition.legend}}</p>
+                <p>Definition</p>
               </div>
-              <div class="value-element" title="{{page.editor.definition.version.title}}">
+              <div class="value-element" title="Set the format version of this manifest.json.">
                 <div class="value-label">
-                  <label for="format_version">{{page.editor.definition.version.text}}</label>
+                  <label for="format_version">Format Version</label>
                 </div>
                 <div class="value-input">
                   <select name="format_version" id="format_version">
@@ -344,27 +344,27 @@
             </div>
             <div class="editor-element">
               <div class="editor-element-legend">
-                <p>{{page.editor.header.legend}}</p>
+                <p>Header</p>
               </div>
-              <div class="value-element" title="{{page.editor.header.name.title}}">
+              <div class="value-element" title="Set the name of this pack.">
                 <div class="value-label">
-                  <label for="header_pack_name">{{page.editor.header.name.text}}</label>
+                  <label for="header_pack_name">Name</label>
                 </div>
                 <div class="value-input">
                   <input type="text" name="pack_name" id="header_pack_name">
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.description.title}}">
+              <div class="value-element" title="Sets the description of this pack.">
                 <div class="value-label">
-                  <label for="header_description">{{page.editor.header.description.text}}</label>
+                  <label for="header_description">Description</label>
                 </div>
                 <div class="value-input">
                   <textarea type="text" name="description" id="header_description"></textarea>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.version.title}}">
+              <div class="value-element" title="Indicates the version of this pack.">
                 <div class="value-label">
-                  <label for="header_version_major">{{page.editor.header.version.text}}</label>
+                  <label for="header_version_major">Version</label>
                 </div>
                 <div class="value-input type-version">
                   <label><input type="number" min="0" name="" id="header_version_major" value="1"></label>
@@ -374,9 +374,9 @@
                   <label><input type="number" min="0" name="" id="header_version_patch" value="0"></label>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.min_engine_version.title}}">
+              <div class="value-element" title="Sets the minimum version of Minecraft (the version this pack was created with) that this pack will run on.">
                 <div class="value-label">
-                  <label id="header_min_engine_version" for="header_min_engine_version_major">{{page.editor.header.min_engine_version.text}}</label>
+                  <label id="header_min_engine_version" for="header_min_engine_version_major">Minimum Engine Version</label>
                 </div>
                 <div class="value-input type-version" id="header_min_engine_version_input">
                   <label><input type="number" min="0" name="" id="header_min_engine_version_major" value="1"></label>
@@ -386,9 +386,9 @@
                   <label><input type="number" min="0" name="" id="header_min_engine_version_patch" value="0"></label>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.uuid.title}}">
+              <div class="value-element" title="Sets the UUID for this pack.">
                 <div class="value-label">
-                  <label for="header_uuid">{{page.editor.header.uuid.text}}</label>
+                  <label for="header_uuid">UUID</label>
                 </div>
                 <div class="value-input type-uuid">
                   <label><input type="text" name="uuid" id="header_uuid"></label>
@@ -397,7 +397,7 @@
                   </label>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.platform_locked.title}}">
+              <div class="value-element" title="Disable this pack for multi-platform environments.">
                 <div class="value-checkbox">
                   <input type="checkbox" name="header_platform_locked" id="header_platform_locked" class="invisible_Control">
                   <label for="header_platform_locked" class="checkbox-body">
@@ -406,13 +406,13 @@
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <p class="checkbox-body-text">{{page.editor.header.platform_locked.text}}</p>
+                    <p class="checkbox-body-text">Platform Lock</p>
                   </label>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.base_game_version.title}}">
+              <div class="value-element" title="Sets the created version of this pack world.">
                 <div class="value-label">
-                  <label id="header_base_game_version" for="header_base_game_version_major">{{page.editor.header.base_game_version.text}}</label>
+                  <label id="header_base_game_version" for="header_base_game_version_major">Base game version</label>
                 </div>
                 <div class="value-input type-version" id="header_base_game_version_input">
                   <label><input type="number" min="0" name="" id="header_base_game_version_major" value="1" disabled></label>
@@ -422,7 +422,7 @@
                   <label><input type="number" min="0" name="" id="header_base_game_version_patch" value="0" disabled></label>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.lock_template_options.title}}">
+              <div class="value-element" title="Locks the world settings when deploying world templates.">
                 <div class="value-checkbox">
                   <input type="checkbox" name="header_lock_template_options" id="header_lock_template_options" class="invisible_Control" disabled>
                   <label for="header_lock_template_options" class="checkbox-body">
@@ -431,30 +431,30 @@
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <p class="checkbox-body-text">{{page.editor.header.lock_template_options.text}}</p>
+                    <p class="checkbox-body-text">Template Option Lock</p>
                   </label>
                 </div>
               </div>
-              <div class="value-element" title="{{page.editor.header.pack_scope.title}}">
+              <div class="value-element" title="Restrict the introduction screen.">
                 <div class="value-label">
-                  <label id="header_pack_scope_label" for="header_pack_scope">{{page.editor.header.pack_scope.text}}</label>
+                  <label id="header_pack_scope_label" for="header_pack_scope">Pack Scope</label>
                 </div>
                 <div class="value-input">
                   <select name="header_pack_scope" id="header_pack_scope">
-                    <option value="none">{{page.editor.header.pack_scope.select.none}}</option>
-                    <option value="global">{{page.editor.header.pack_scope.select.global}}</option>
-                    <option value="world">{{page.editor.header.pack_scope.select.world}}</option>
+                    <option value="none">none</option>
+                    <option value="global">Global</option>
+                    <option value="world">World</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div class="editor-element" title="{{page.editor.modules.title}}">
+            <div class="editor-element" title="Sets which modules the pack containing this manifest will use.">
               <div class="editor-element-legend">
-                <p>{{page.editor.modules.legend}}</p>
+                <p>Modules</p>
               </div>
               <div class="modules tab_contents">
                 <div class="modules tab-controls">
-                  <div class="modules tab-body" title="{{page.editor.modules.tab_controls.title}}">
+                  <div class="modules tab-body" title="If there is more than one module to edit, switch between them.">
                     <label class="modules tab-children invisible_Control selected">
                       <input type="button" class="modules" ui>
                       <div class="tab-number">0</div>
@@ -462,23 +462,23 @@
                     </label>
                   </div>
                   <div class="modules add-tab disabled">
-                    <label class="invisible_Control" title="{{page.editor.modules.add.title}}">
+                    <label class="invisible_Control" title="Adds a module.">
                       <input type="button" id="modules_add" class="modules" disabled>
-                      <div class="add-tab-text">{{page.editor.modules.add.text}}</div>
+                      <div class="add-tab-text">+ Add</div>
                     </label>
                   </div>
                   <div class="modules remove-tab disabled">
-                    <label class="invisible_Control" title="{{page.editor.modules.delete.title}}">
+                    <label class="invisible_Control" title="Deletes the selected module.">
                       <input type="button" id="modules-delete" class="modules" disabled>
-                      <div class="remove-tab-text">{{page.editor.modules.delete.text}}</div>
+                      <div class="remove-tab-text">- Remove</div>
                     </label>
                   </div>
                 </div>
                 <div class="modules tab-content-list">
                   <div class="selected-tab-content">
-                    <div class="value-element" title="{{page.editor.modules.type.title}}">
+                    <div class="value-element" title="Sets the type of this module.">
                       <div class="value-label">
-                        <label for="modules_type">{{page.editor.modules.type.text}}</label>
+                        <label for="modules_type">Type</label>
                       </div>
                       <div class="value-input">
                         <select name="modules_type" id="modules_type" required>
@@ -494,17 +494,17 @@
                         </select>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.modules.description.title}}">
+                    <div class="value-element" title="Sets the description of this module.">
                       <div class="value-label">
-                        <label for="modules_description">{{page.editor.modules.description.text}}</label>
+                        <label for="modules_description">Description</label>
                       </div>
                       <div class="value-input">
                         <textarea type="text" name="description" id="modules_description"></textarea>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.modules.version.title}}">
+                    <div class="value-element" title="Sets the version of this module.">
                       <div class="value-label">
-                        <label for="modules_version_major">{{page.editor.modules.version.text}}</label>
+                        <label for="modules_version_major">Version</label>
                       </div>
                       <div class="value-input type-version">
                         <label><input type="number" min="0" name="" id="modules_version_major" value="1"></label>
@@ -514,18 +514,18 @@
                         <label><input type="number" min="0" name="" id="modules_version_patch" value="0"></label>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.modules.uuid.title}}">
+                    <div class="value-element" title="Sets the UUID for this module.">
                       <div class="value-label">
-                        <label for="modules_uuid">{{page.editor.modules.uuid.text}}</label>
+                        <label for="modules_uuid">UUID</label>
                       </div>
                       <div class="value-input type-uuid">
                         <label><input type="text" name="uuid" id="modules_uuid"></label>
                         <label><input type="button" value="Generate" class="generate_uuid"></label>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.modules.language.title}}">
+                    <div class="value-element" title="Sets the script language.">
                       <div class="value-label">
-                        <label for="modules_language" id="modules_language_label">{{page.editor.modules.language.text}}</label>
+                        <label for="modules_language" id="modules_language_label">Language</label>
                       </div>
                       <div class="value-input">
                         <select name="modules_language" id="modules_language">
@@ -533,9 +533,9 @@
                         </select>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.modules.entry.title}}">
+                    <div class="value-element" title="Sets the script primary file.">
                       <div class="value-label">
-                        <label for="modules_entry" id="modules_entry_label">{{page.editor.modules.entry.text}}</label>
+                        <label for="modules_entry" id="modules_entry_label">Entry</label>
                       </div>
                       <div class="value-input">
                         <input type="text" name="pack_name" id="modules_entry">
@@ -545,11 +545,11 @@
                 </div>
               </div>
             </div>
-            <div class="editor-element" title="{{page.editor.dependencies.title}}">
+            <div class="editor-element" title="Sets dependencies. If a dependency pack exists, it will be installed at the same time as the dependency pack.">
               <div class="editor-element-legend toggle">
                 <input type="checkbox" name="dependencies" id="dependencies_enable" class="invisible_Control">
                 <label for="dependencies_enable" class="toggle-body">
-                  <p class="toggle_body_text">{{page.editor.dependencies.legend}}</p>
+                  <p class="toggle_body_text">Dependencies</p>
                   <div class="toggle_body_box">
                     <div class="toggle_body_padding"></div>
                     <div class="toggle_body_thumb"></div>
@@ -558,39 +558,39 @@
               </div>
               <div class="dependencies tab_contents">
                 <div class="dependencies tab-controls">
-                  <div class="dependencies tab-body" title="{{page.editor.dependencies.tab_controls.title}}">
+                  <div class="dependencies tab-body" title="If there are multiple dependencies to edit, switch between them.">
                     <label class="dependencies tab-children invisible_Control selected">
                       <input type="button" class="dependencies" ui>
                       <div class="tab-number">0</div>
                       <div class="tab-underBar"></div>
                     </label>
                   </div>
-                  <div class="dependencies add-tab disabled" title="{{page.editor.dependencies.add.title}}">
+                  <div class="dependencies add-tab disabled" title="Add a dependent pack.">
                     <label class="invisible_Control">
                       <input type="button" id="dependencies_add" class="dependencies" disabled>
-                      <div class="add-tab-text">{{page.editor.dependencies.add.text}}</div>
+                      <div class="add-tab-text">+ Add</div>
                     </label>
                   </div>
-                  <div class="dependencies remove-tab disabled" title="{{page.editor.dependencies.delete.title}}">
+                  <div class="dependencies remove-tab disabled" title="Deletes the selected pack.">
                     <label class="invisible_Control">
                       <input type="button" id="dependencies-delete" class="dependencies" disabled>
-                      <div class="remove-tab-text">{{page.editor.dependencies.delete.text}}</div>
+                      <div class="remove-tab-text">- Remove</div>
                     </label>
                   </div>
                 </div>
                 <div class="dependencies tab-content-list">
                   <div class="selected-tab-content">
-                    <div class="value-element" title="{{page.editor.dependencies.uuid.title}}">
+                    <div class="value-element" title="Sets the UUID of the dependent pack.">
                       <div class="value-label">
-                        <label for="dependencies_uuid">{{page.editor.dependencies.uuid.text}}</label>
+                        <label for="dependencies_uuid">UUID</label>
                       </div>
                       <div class="value-input">
                         <input type="text" name="uuid" id="dependencies_uuid" disabled>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.dependencies.version.title}}">
+                    <div class="value-element" title="Sets the version of the dependent pack.">
                       <div class="value-label">
-                        <label for="dependencies_version_major">{{page.editor.dependencies.version.text}}</label>
+                        <label for="dependencies_version_major">Version</label>
                       </div>
                       <div class="value-input type-version">
                         <label><input type="number" min="0" name="" id="dependencies_version_major" value="1" disabled></label>
@@ -604,19 +604,19 @@
                 </div>
               </div>
             </div>
-            <div class="editor-element" title="{{page.editor.capabilities.title=page.editor.capabilities.}}">
+            <div class="editor-element" title="Use to enable special features.">
               <div class="editor-element-legend toggle">
                 <input type="checkbox" name="capabilities" id="capabilities_enable" class="invisible_Control">
                 <label for="capabilities_enable" class="toggle-body">
-                  <p class="toggle_body_text">{{page.editor.capabilities.legend}}</p>
+                  <p class="toggle_body_text">Capabilities</p>
                   <div class="toggle_body_box">
                     <div class="toggle_body_padding"></div>
                     <div class="toggle_body_thumb"></div>
                   </div>
                 </label>
               </div>
-              <div class="capabilities_list" title="{{page.editor.capabilities.capabilities_list.title}}">
-                <div class="value-element" title="{{page.editor.capabilities.experimental_custom_ui}}">
+              <div class="capabilities_list" title="Enables additional features in this pack.">
+                <div class="value-element" title="Enable custom UI features.">
                   <div class="value-checkbox">
                     <input type="checkbox" name="experimental_custom_ui" id="experimental_custom_ui" class="invisible_Control" disabled>
                     <label for="experimental_custom_ui" class="checkbox-body">
@@ -629,7 +629,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="value-element" title="{{page.editor.capabilities.chemistry}}">
+                <div class="value-element" title="Enables additions and changes to Education Chemistry features.">
                   <div class="value-checkbox">
                     <input type="checkbox" name="chemistry" id="chemistry" class="invisible_Control" disabled>
                     <label for="chemistry" class="checkbox-body">
@@ -642,7 +642,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="value-element" title="{{page.editor.capabilities.raytracing}}">
+                <div class="value-element" title="Enables ray tracing features in the pack. (1.15.x and above)">
                   <div class="value-checkbox">
                     <input type="checkbox" name="raytracing" id="raytracing" class="invisible_Control" disabled>
                     <label for="raytracing" class="checkbox-body">
@@ -657,11 +657,11 @@
                 </div>
               </div>
             </div>
-            <div class="editor-element" title="{{page.editor.metadata.title}}">
+            <div class="editor-element" title="Information about the creator. Does not affect gameplay.">
               <div class="editor-element-legend toggle">
                 <input type="checkbox" name="metadata" id="metadata_enable" class="invisible_Control">
                 <label for="metadata_enable" class="toggle-body">
-                  <p class="toggle_body_text">{{page.editor.metadata.legend}}</p>
+                  <p class="toggle_body_text">Metadata</p>
                   <div class="toggle_body_box">
                     <div class="toggle_body_padding"></div>
                     <div class="toggle_body_thumb"></div>
@@ -669,40 +669,40 @@
                 </label>
               </div>
               <div class="metadata_list">
-                <div class="value-element" title="{{page.editor.metadata.author.title}}">
+                <div class="value-element" title="Sets the author of this pack. Multiple authors can be added.">
                   <div class="value-label">
-                    <label for="metadata_author">{{page.editor.metadata.author.text}}</label>
+                    <label for="metadata_author">Author</label>
                   </div>
                   <div class="value-input type_authors">
                     <div class="authors_list">
                     </div>
-                    <div class="authors_list_control" title="{{page.editor.metadata.author.add.title}}">
+                    <div class="authors_list_control" title="Add author input field.">
                       <div class="add_author">
                         <input type="button" id="author-add" class="invisible_Control" disabled>
                         <label for="author-add">
-                          <div class="add_author_text">{{page.editor.metadata.author.add.text}}</div>
+                          <div class="add_author_text">+ Add author</div>
                         </label>
                       </div>
-                      <div class="remove_author" title="{{page.editor.metadata.author.delete.title}}">
+                      <div class="remove_author" title="Delete the author input field.">
                         <input type="button" id="author-delete" class="invisible_Control" disabled>
                         <label for="author-delete">
-                          <div class="remove_author_text">{{page.editor.metadata.author.delete.text}}</div>
+                          <div class="remove_author_text">- Remove author</div>
                         </label>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="value-element" title="{{page.editor.metadata.url.title}}">
+                <div class="value-element" title="Set the homepage URL for this pack.">
                   <div class="value-label">
-                    <label for="metadata_url">{{page.editor.metadata.url.text}}</label>
+                    <label for="metadata_url">URL</label>
                   </div>
                   <div class="value-input">
                     <input type="url" name="metadata_url" id="metadata_url" disabled>
                   </div>
                 </div>
-                <div class="value-element" title="{{page.editor.metadata.license.title}}">
+                <div class="value-element" title="Set the license for this pack.">
                   <div class="value-label">
-                    <label for="metadata_license">{{page.editor.metadata.license.text}}</label>
+                    <label for="metadata_license">License</label>
                   </div>
                   <div class="value-input">
                     <input type="text" name="metadata_license" id="metadata_license" disabled>
@@ -710,11 +710,11 @@
                 </div>
               </div>
             </div>
-            <div class="editor-element" title="{{page.editor.subpacks.title}}">
+            <div class="editor-element" title="Set the sub-pack function. This function allows you to switch contents on the add-on introduction screen.">
               <div class="editor-element-legend toggle">
                 <input type="checkbox" name="subpacks" id="subpacks_enable" class="invisible_Control">
                 <label for="subpacks_enable" class="toggle-body">
-                  <p class="toggle_body_text">{{page.editor.subpacks.legend}}</p>
+                  <p class="toggle_body_text">Subpacks</p>
                   <div class="toggle_body_box">
                     <div class="toggle_body_padding"></div>
                     <div class="toggle_body_thumb"></div>
@@ -723,47 +723,47 @@
               </div>
               <div class="subpacks tab_contents">
                 <div class="subpacks tab-controls">
-                  <div class="subpacks tab-body" title="{{page.editor.subpacks.tab_controls.title}}">
+                  <div class="subpacks tab-body" title="Switch if there are multiple subpacks to edit.">
                     <label class="subpacks tab-children invisible_Control selected">
                       <input type="button" class="subpacks" ui>
                       <div class="tab-number">0</div>
                       <div class="tab-underBar"></div>
                     </label>
                   </div>
-                  <div class="subpacks add-tab disabled" title="{{page.editor.subpacks.add.title}}">
+                  <div class="subpacks add-tab disabled" title="Add a folder of subpacks.">
                     <label class="invisible_Control">
                       <input type="button" id="subpacks_add" class="subpacks" disabled>
-                      <div class="add-tab-text">{{page.editor.subpacks.add.text}}</div>
+                      <div class="add-tab-text">+ Add</div>
                     </label>
                   </div>
-                  <div class="subpacks remove-tab disabled" title="{{page.editor.subpacks.delete.title}}">
+                  <div class="subpacks remove-tab disabled" title="Deletes the selected subpack.">
                     <label class="invisible_Control">
                       <input type="button" id="subpacks-delete" class="subpacks" disabled>
-                      <div class="remove-tab-text">{{page.editor.subpacks.delete.text}}</div>
+                      <div class="remove-tab-text">- Remove</div>
                     </label>
                   </div>
                 </div>
                 <div class="subpacks tab-content-list">
                   <div class="selected-tab-content">
-                    <div class="value-element" title="{{page.editor.subpacks.folder_name.title}}">
+                    <div class="value-element" title="Specify a folder name for the subpack.">
                       <div class="value-label">
-                        <label for="subpacks_folder_name">{{page.editor.subpacks.folder_name.text}}</label>
+                        <label for="subpacks_folder_name">Folder Name</label>
                       </div>
                       <div class="value-input">
                         <input type="text" name="uuid" id="subpacks_folder_name" disabled>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.subpacks.name.title}}">
+                    <div class="value-element" title="Sets the actual name of the subpack.">
                       <div class="value-label">
-                        <label for="subpacks_name">{{page.editor.subpacks.name.text}}</label>
+                        <label for="subpacks_name">Name</label>
                       </div>
                       <div class="value-input">
                         <input type="text" name="uuid" id="subpacks_name" disabled>
                       </div>
                     </div>
-                    <div class="value-element" title="{{page.editor.subpacks.memory_tier.title}}">
+                    <div class="value-element" title="Memory usage for this subpack.">
                       <div class="value-label">
-                        <label for="subpacks_memory_tier">{{page.editor.subpacks.memory_tier.text}}</label>
+                        <label for="subpacks_memory_tier">Memory Tier</label>
                       </div>
                       <div class="value-input">
                         <input type="number" min="0" name="subpacks_memory_tier" id="subpacks_memory_tier" value="0" disabled>
@@ -777,10 +777,10 @@
           <div class="editor_element_group editor_simple_mode hide">
             <div class="editor-element">
               <div class="editor-element-legend">
-                <p>{{page.editor_simple.legend}}</p>
+                <p>Usage</p>
               </div>
               <div class="simple_type_description_element">
-                <p>{{page.editor_simple.type.description}}</p>
+                <p>Select the use of this manifest.json.</p>
               </div>
               <div class="simple_radio_element">
                 <div class="simple_radio_child">
@@ -792,7 +792,7 @@
                       </svg>
                     </div>
                     <div class="simple_radio_child_text">
-                      <p>{{page.editor_simple.type.behavior}}</p>
+                      <p>behavior pack</p>
                     </div>
                   </label>
                 </div>
@@ -806,7 +806,7 @@
                       </svg>
                     </div>
                     <div class="simple_radio_child_text">
-                      <p>{{page.editor_simple.type.texture}}</p>
+                      <p>resource pack</p>
                     </div>
                   </label>
                 </div>
@@ -819,7 +819,7 @@
                       </svg>
                     </div>
                     <div class="simple_radio_child_text">
-                      <p>{{page.editor_simple.type.world}}</p>
+                      <p>world template</p>
                     </div>
                   </label>
                 </div>
@@ -833,7 +833,7 @@
                       </svg>
                     </div>
                     <div class="simple_radio_child_text">
-                      <p>{{page.editor_simple.type.skin}}</p>
+                      <p>skin pack</p>
                     </div>
                   </label>
                 </div>
@@ -841,27 +841,27 @@
             </div>
             <div class="editor-element">
               <div class="editor-element-legend">
-                <p><label for="simple_pack_name">{{page.editor_simple.name.legend}}</label></p>
+                <p><label for="simple_pack_name">Pack Name</label></p>
               </div>
               <div class="simple_type_description_element">
-                <p>{{page.editor_simple.name.description}}</p>
+                <p>Set the name of the pack. The name you set will be displayed on the management screen, etc.</p>
               </div>
-              <div class="simple_value_element" title="{{page.editor_simple.name.title}}">
+              <div class="simple_value_element" title="Sets the name of this pack.">
                 <div class="value-input">
-                  <input type="text" name="pack_name" id="simple_pack_name" placeholder="{{page.editor_simple.name.placeholder}}">
+                  <input type="text" name="pack_name" id="simple_pack_name" placeholder="Enter pack name">
                 </div>
               </div>
             </div>
             <div class="editor-element">
               <div class="editor-element-legend">
-                <p><label for="simple_description">{{page.editor_simple.description.legend}}</label></p>
+                <p><label for="simple_description">Pack Description</label></p>
               </div>
               <div class="simple_type_description_element">
-                <p>{{page.editor_simple.description.description}}</p>
+                <p>Set a description for this pack. The description you set will be displayed on the administration page, etc.</p>
               </div>
-              <div class="simple_value_element" title="{{page.editor_simple.description.title}}">
+              <div class="simple_value_element" title="Sets the description of this pack.">
                 <div class="value-input">
-                  <textarea type="text" name="description" id="simple_description" placeholder="{{page.editor_simple.description.placeholder}}"></textarea>
+                  <textarea type="text" name="description" id="simple_description" placeholder="Description."></textarea>
                 </div>
               </div>
             </div>
@@ -872,28 +872,28 @@
       <div class="data_check">
         <div class="preview">
           <div class="preview_control_bar">
-            <div class="preview_control_child copy" title="{{page.data_check.control_bar.copy.title}}">
+            <div class="preview_control_child copy" title="Copy the json to the clipboard.">
               <input type="button" id="control_copy" class="invisible_Control" ui>
               <label for="control_copy" class="control_text">
-                <p id="control_copy_text">{{page.data_check.control_bar.copy.text}}</p>
+                <p id="control_copy_text">Copy</p>
               </label>
             </div>
-            <div class="preview_control_child" title="{{page.data_check.control_bar.download.title}}">
+            <div class="preview_control_child" title="Download manifest.json.">
               <input type="button" id="control_download" class="invisible_Control" ui>
               <label for="control_download" class="control_text">
-                <p>{{page.data_check.control_bar.download.text}}</p>
+                <p>Download</p>
               </label>
             </div>
-            <div class="preview_control_child save disabled" title="{{page.data_check.control_bar.save.title}}">
+            <div class="preview_control_child save disabled" title="Save manifest.json. Ctrl+S">
               <input type="button" id="control_save" class="invisible_Control" ui>
               <label for="control_save" class="control_text">
-                <p><span id="save_text">{{page.data_check.control_bar.save.text}}</span><span id="edit_state">*</span></p>
+                <p><span id="save_text">Save</span><span id="edit_state">*</span></p>
               </label>
             </div>
           </div>
           <div class="display_preview">
             <div class="preview_header">
-              <span>{{page.data_check.display_preview.header}}</span>
+              <span>Minecraft Preview</span>
             </div>
             <div class="preview-toggle">
               <input type="button" id="toggle-preview" class="invisible_Control" ui>
@@ -1172,7 +1172,7 @@
           </script>
           <div class="code-preview">
             <div class="preview_header">
-              <span>{{page.data_check.code_preview.header}}</span>
+              <span>Code</span>
             </div>
             <pre class="language-json">
               <code class="language-json"></code>
@@ -1186,16 +1186,16 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="close" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 15l-6-6-6 6">
               </svg>
-              <span>{{page.data_check.issue.status.bar}}</span>
+              <span>Issue</span>
             </div>
             <div class="issue-status-num">
               <div class="issue-status-warning">
                 <img src="../img/warning.svg" alt="" width="19px" height="19px">
-                <div>{{page.data_check.issue.status.warning}}<span class="issue-warning-num">0</span></div>
+                <div>Warning:<span class="issue-warning-num">0</span></div>
               </div>
               <div class="issue-status-error">
                 <img src="../img/error.svg" alt="" width="19px" height="19px">
-                <div>{{page.data_check.issue.status.error}}:<span class="issue-error-num">0</span></div>
+                <div>Error:<span class="issue-error-num">0</span></div>
               </div>
             </div>
           </label>
@@ -1206,8 +1206,8 @@
       </div>
     </div>
     <div class="unsupported">
-      <p>{{page.unsupported.text.1}}</p>
-      <p>{{page.unsupported.text.2.1}}<a href="microsoft-edge:https://toka7290.github.io/MCAddonSetupManager/" target="_blank" rel="noopener noreferrer">{{page.unsupported.text.2.2}}</a>{{page.unsupported.text.2.3}}</p>
+      <p>Not available in your browser (Internet Explorer).</p>
+      <p>Please use Chrome, <a href="microsoft-edge:https://toka7290.github.io/MCAddonSetupManager/" target="_blank" rel="noopener noreferrer">Edge</a>, Firefox, Safari</p>
     </div>
     <!-- sw -->
     <script>

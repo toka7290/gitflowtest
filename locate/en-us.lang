@@ -1,64 +1,214 @@
-page.title=About TTSProjection
+page.header.title=Manifest Generator - TokaTools
+page.header.description=Add-on creation aid for Minecraft Bedrock Edition. Edit, convert, generate, and preview manifest.json easily and conveniently. Full support for resource packs, behavior packs, world templates, and everything in between! Easy editing of decorative text with preview display function!
+page.header.og_site_name=Manifest Generator
+page.header.og_title=Manifest Generator
+page.header.og_description=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
-header.title=TTSProjection
-header.menu.home=Home
-header.menu.howtouse=How to Use
-header.menu.program=How to Edit Program List
-header.menu.clock=How to use the Clock function
-header.menu.plus_mode=How to use the Plus function
-header.menu.help=What to do if you have a problem?
-header.menu.changelogs=Update History
-header.menu.site_changelogs=Site Update History
-header.menu.download=Download
-header.menu.sitemap=Page List
+page.header.json_ld.about=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
-main.content.description.title=What is TTSProjection?
-main.content.description.indent.1=TTSProjection is a projection mapping software for flat surfaces created by Toka.
-main.content.description.indent.2=Research Project in FY30
-main.content.description.indent.3=Official name: Tamura Tokai Sibuya Projection
+page.content.header.title=Manifest Generator
+page.content.header.header_menu.file_load=Load
+page.content.header.header_menu.import=Import
+page.content.header.header_menu.show_preview=Preview
+page.content.header.header_menu.show_help=Help
+page.content.header.header_menu.about=About
+page.content.header.header_menu_alt.file_load=Open
+page.content.header.header_menu_alt.import=Import
 
-main.content.work.title.1=Main Functions
-main.content.work.clause.1=Playback of multiple images and videos
-main.content.work.clause.2=Display of analog and digital clocks
-main.content.work.clause.3=Accurate media control by program list
-main.content.work.title.2=Description of each mode
-main.content.work.ul.1=Normal mode (normal)
-main.content.work.ul.2=Displays images or videos as they are.
-main.content.work.ul.3=It is also possible to display nothing for a certain period of time.
-main.content.work.ul.4=Clock mode (clock)
-main.content.work.ul.5=Displays a clock in front of the normal mode.
-main.content.work.ul.6=Clock can be drawn programmatically without using images or videos
-main.content.work.ul.7=The clock ticks the current time exactly!
-main.content.work.ul.8=Normal Plus Mode (normal+)
-main.content.work.ul.9=Fade in/out, rotation, and other image and video movements
-main.content.work.ul.10=Debug mode(debug)
-main.content.work.ul.11=Mode to display test patterns. For adjusting the projector.
+page.content.header.more-info.toka_tools=TokaTools
+page.content.header.more-info.homepage=Homepage
+page.content.header.more-info.twitter=Twitter
+page.content.header.more-info.git_hub=GitHub
+page.content.header.more-info.manifest_help=Manifest Help
+page.content.header.more-info.subpacks_help=Subpacks Help
+page.content.header.more-info.about=about
 
-main.content.howtouse.title.1=How to use
-main.content.howtouse.ol.1=Add photos, videos, etc. to
-main.content.howtouse.ol.2=data/Media
-main.content.howtouse.ol.3=Save photos, videos, etc. in
-main.content.howtouse.ol.4=Set the order of playback, etc. in the program list.
-main.content.howtouse.ol.5=By default, the
-main.content.howtouse.ol.6=data
-main.content.howtouse.ol.7=in the
-main.content.howtouse.ol.8=program.xml
-main.content.howtouse.ol.9=in data.
-main.content.howtouse.ol.10=For more information on how to edit the program list, click here!
-main.content.howtouse.ol.11=Start the application.
-main.content.howtouse.title.2=Cautions for use
-main.content.howtouse.indent.1=If the program is saved on a removable disk, copy it to the desktop and use it.
-main.content.howtouse.indent.2=*If you start the application from a removable disk, it may not work properly.
-main.content.howtouse.indent.3=If the operation is not stable, it may be improved by reducing the video quality.
- 
-main.content.changelog.title=Update History
-main.content.changelog.1=Latest Version
-main.content.changelog.2=View past update history
+page.content.header.page_about.sub_title=TokaTools
+page.content.header.page_about.title=Manifest Generator
+page.content.header.page_about.about_description.1=Tool to generate manifest.json required by add-ons (resource packs, behavior packs, world templates, skin packs, etc.) in Minecraft Bedrock Edition (BE).
+page.content.header.page_about.about_description.2=All functions are fully supported.
+page.content.header.page_about.external_link.tokaTools=TokaTools
+page.content.header.page_about.external_link.tokamcwin10=Toka blog
+page.content.header.page_about.external_link.twitter=Twitter
+page.content.header.page_about.external_link.github=Github
+page.content.header.page_about.external_link.38495158=Jump to the explanation page of manifest.json.
+page.content.header.page_about.external_link.39181630=Jump to the explanation page of Subpacks.
 
-main.content.download.title=Download
-main.content.download.indent.1=Requirements
-main.content.download.indent.2=Can run on environments that support java 8
-main.content.download.indent.3=Click here to download
+page.content.file-drop-zone=Drop and import files.
 
-footer.sitemap=Page List
-footer.top=Return to top of page
+page.content.welcome.guidance_text=Welcome to Manifest Generator!
+page.content.welcome.quick_start.title=Easy to create
+page.content.welcome.quick_start.description=Simple editor for easy creation! Just a few settings
+page.content.welcome.edit_start.title=Create New
+page.content.welcome.edit_start.description=Create manifest.json from scratch
+page.content.welcome.file_start.title=Open File
+page.content.welcome.file_start.description=Open the already existing manifest.json
+
+page.editor.option.legend=Editor Options
+page.editor.option.control_simple.title=Make the editor a simple editor.
+page.editor.option.control_simple.text=Simple Editor
+page.editor.option.control_compact.title=Remove newlines and whitespace and reduce the size.
+page.editor.option.control_compact.text=JSON Minimize
+
+page.editor.definition.legend=Definition
+page.editor.definition.version.title=Set the format version of this manifest.json..jsonのフォーマットバージョンを設定します。
+page.editor.definition.version.text=Format Version
+
+
+page.editor.header.legend=Header
+page.editor.header.name.title=Set the name of this pack.
+page.editor.header.name.text=Name
+page.editor.header.description.title=Sets the description of this pack.
+page.editor.header.description.text=Description
+page.editor.header.version.title=Indicates the version of this pack.
+page.editor.header.version.text=Version
+page.editor.header.min_engine_version.title=Sets the minimum version of Minecraft (the version this pack was created with) that this pack will run on.
+page.editor.header.min_engine_version.text=Minimum Engine Version
+page.editor.header.uuid.title=Sets the UUID for this pack.
+page.editor.header.uuid.text=UUID
+page.editor.header.platform_locked.title=Disable this pack for multi-platform environments.
+page.editor.header.platform_locked.text=Platform Lock
+page.editor.header.base_game_version.title=Sets the created version of this pack world.
+page.editor.header.base_game_version.text=Base game version
+page.editor.header.lock_template_options.title=Locks the world settings when deploying world templates.
+page.editor.header.lock_template_options.text=Template Option Lock
+page.editor.header.pack_scope.title=Restrict the introduction screen.
+page.editor.header.pack_scope.text=Pack Scope
+page.editor.header.pack_scope.select.none=none
+page.editor.header.pack_scope.select.global=Global
+page.editor.header.pack_scope.select.world=World
+
+page.editor.modules.title=Sets which modules the pack containing this manifest will use.
+page.editor.modules.legend=Modules
+page.editor.modules.tab_controls.title=If there is more than one module to edit, switch between them.
+page.editor.modules.add.title=Adds a module.
+page.editor.modules.add.text=+ Add
+page.editor.modules.delete.title=Deletes the selected module.
+page.editor.modules.delete.text=- Remove
+page.editor.modules.type.title=Sets the type of this module.
+page.editor.modules.type.text=Type
+page.editor.modules.description.title=Sets the description of this module.
+page.editor.modules.description.text=Description
+page.editor.modules.version.title=Sets the version of this module.
+page.editor.modules.version.text=Version
+page.editor.modules.uuid.title=Sets the UUID for this module.
+page.editor.modules.uuid.text=UUID
+page.editor.modules.language.title=Sets the script language.
+page.editor.modules.language.text=Language
+page.editor.modules.entry.title=Sets the script primary file.
+page.editor.modules.entry.text=Entry
+
+page.editor.dependencies.title=Sets dependencies. If a dependency pack exists, it will be installed at the same time as the dependency pack.
+page.editor.dependencies.legend=Dependencies
+page.editor.dependencies.tab_controls.title=If there are multiple dependencies to edit, switch between them.
+page.editor.dependencies.add.title=Add a dependent pack.
+page.editor.dependencies.add.text=+ Add
+page.editor.dependencies.delete.title=Deletes the selected pack.
+page.editor.dependencies.delete.text=- Remove
+page.editor.dependencies.uuid.title=Sets the UUID of the dependent pack.
+page.editor.dependencies.uuid.text=UUID
+page.editor.dependencies.version.title=Sets the version of the dependent pack.
+page.editor.dependencies.version.text=Version
+
+page.editor.capabilities.title=Use to enable special features.
+page.editor.capabilities.legend=Capabilities
+page.editor.capabilities.capabilities_list.title=Enables additional features in this pack.
+page.editor.capabilities.experimental_custom_ui=Enable custom UI features.
+page.editor.capabilities.chemistry=Enables additions and changes to Education Chemistry features.
+page.editor.capabilities.raytracing=Enables ray tracing features in the pack. (1.15.x and above)
+
+page.editor.metadata.title=Information about the creator. Does not affect gameplay.
+page.editor.metadata.legend=Metadata
+page.editor.metadata.author.title=Sets the author of this pack. Multiple authors can be added.
+page.editor.metadata.author.text=Author
+page.editor.metadata.author.add.title=Add author input field.
+page.editor.metadata.author.add.text=+ Add author
+page.editor.metadata.author.delete.title=Delete the author input field.
+page.editor.metadata.author.delete.text=- Remove author
+page.editor.metadata.url.title=Set the homepage URL for this pack.
+page.editor.metadata.url.text=URL
+page.editor.metadata.license.title=Set the license for this pack.
+page.editor.metadata.license.text=License
+
+page.editor.subpacks.title=Set the sub-pack function. This function allows you to switch contents on the add-on introduction screen.
+page.editor.subpacks.legend=Subpacks
+page.editor.subpacks.tab_controls.title=Switch if there are multiple subpacks to edit.
+page.editor.subpacks.add.title=Add a folder of subpacks.
+page.editor.subpacks.add.text=+ Add
+page.editor.subpacks.delete.title=Deletes the selected subpack.
+page.editor.subpacks.delete.text=- Remove
+page.editor.subpacks.folder_name.title=Specify a folder name for the subpack.
+page.editor.subpacks.folder_name.text=Folder Name
+page.editor.subpacks.name.title=Sets the actual name of the subpack.
+page.editor.subpacks.name.text=Name
+page.editor.subpacks.memory_tier.title=Memory usage for this subpack.
+page.editor.subpacks.memory_tier.text=Memory Tier
+
+page.editor_simple.legend=Usage
+page.editor_simple.type.description=Select the use of this manifest.json.
+page.editor_simple.type.behavior=behavior pack
+page.editor_simple.type.texture=resource pack
+page.editor_simple.type.world=world template
+page.editor_simple.type.skin=skin pack
+page.editor_simple.name.legend=Pack Name
+page.editor_simple.name.description=Set the name of the pack. The name you set will be displayed on the management screen, etc.
+page.editor_simple.name.title=Sets the name of this pack.
+page.editor_simple.name.placeholder=Enter pack name
+page.editor_simple.description.legend=Pack Description
+page.editor_simple.description.description=Set a description for this pack. The description you set will be displayed on the administration page, etc.
+page.editor_simple.description.title=Sets the description of this pack.
+page.editor_simple.description.placeholder=Enter description
+
+page.data_check.control_bar.copy.title=Copy the json to the clipboard.
+page.data_check.control_bar.copy.text=Copy
+page.data_check.control_bar.download.title=Download manifest.json.
+page.data_check.control_bar.download.text=Download
+page.data_check.control_bar.save.title=Save manifest.json. Ctrl+S
+page.data_check.control_bar.save.text=Save
+
+page.data_check.display_preview.header=Minecraft Preview
+
+page.data_check.code_preview.header=Code
+
+page.data_check.issue.status.bar=Issue
+page.data_check.issue.status.warning=Warning:
+page.data_check.issue.status.error=Error:
+
+page.unsupported.text.1=Not available in your browser (Internet Explorer).
+page.unsupported.text.2.1=Please use Chrome, 
+page.unsupported.text.2.2=Edge
+page.unsupported.text.2.3=, Firefox,Safari
+
+page.help.1=Loads a file
+page.help.2.1=Edit data
+page.help.2.2=Errors, etc. can be seen in the Issues tab at the bottom.
+page.help.3=Actual display of entered and edited data, json viewing and downloading/copying.
+
+
+script.window.page_leave=You are about to leave this page.
+
+script.issue.clear=No problem.
+script.issue.text.uuid_empty=UUID is empty, please enter a UUID.
+script.issue.text.uuid_not_valid=The string entered is not a valid UUID.
+script.issue.text.name_empty=The name is empty.
+script.issue.text.last_character_backslash=The last character is a backslash \"\\\". Please make it an escape character or delete it.
+script.issue.text.header_min_engine_version_higher=Format version 1 must be set to a version lower than 1.13. Higher versions are supported in format version 2.
+script.issue.text.header_min_engine_version_lower=You cannot specify a version lower than version 1.12.
+script.issue.text.header_base_game_version_lower=Cannot specify a version lower than version1.12.
+script.issue.text.header_name_empty=The name is empty. If the name is empty, the message \"No name\" will be displayed.
+script.issue.text.header_description_empty=No description. If the description is empty, the message \"Unknown pack description\" will be displayed.
+script.issue.text.modules_module_null=Please select the type.
+script.issue.text.modules_module_past_versions=\"%s\" is a type supported in past versions. It does not work in the latest version. \"script\" should be used.
+script.issue.text.modules_description_empty=No description.
+script.issue.text.modules_not_specified=Primary file not specified
+script.issue.text.modules_not_extension=The specified file does not have a .js extension. The primary file does not support non-JavaScript files.
+script.issue.text.capabilities_not_selected=Not a single item is selected.
+script.issue.text.metadata_author_not_one=None of the names are selected.
+script.issue.text.metadata_url_empty=No URL has been entered.
+script.issue.text.metadata_license_empty=No license entered.
+script.issue.text.subpacks_folder_empty=The folder name is empty.
+
+script.import.not_manifest=This file is not manifest.json, please select manifest.json.
+
+script.display_preview.no_title=No name
+script.display_preview.no_description=§cUnknown Pack Description

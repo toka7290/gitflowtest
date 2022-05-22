@@ -1,64 +1,214 @@
-page.title=TTSProjectionについて
+page.header.title=Manifest Generator - TokaTools
+page.header.description=Minecraft Bedrock Edition 向けのアドオン作成補助ツール。 manifest.jsonを簡単手軽に編集、変換、生成、プレビューできます。 リソースパック、ビヘイビアパック、ワールドテンプレートの他、すべての用途に完全対応！ プレビュー表示機能で装飾文字の編集も簡単！
+page.header.og_site_name=Manifest Generator
+page.header.og_title=Manifest Generator
+page.header.og_description=Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。
 
-header.title=TTSProjection
-header.menu.home=ホーム
-header.menu.howtouse=使い方
-header.menu.program=プログラムリストの編集方法
-header.menu.clock=クロック機能の使い方
-header.menu.plus_mode=プラス機能の使い方
-header.menu.help=困ったときは？
-header.menu.changelogs=更新履歴
-header.menu.site_changelogs=サイトの更新履歴
-header.menu.download=ダウンロード
-header.menu.sitemap=ページ一覧
+page.header.json_ld.about=Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。
 
-main.content.description.title=TTSProjectionとは？
-main.content.description.indent.1=TTSProjectionはとかさんが作成した平面用プロジェクションマッピングソフトです。
-main.content.description.indent.2=30年度課題研究成果物
-main.content.description.indent.3=正式名称「Tamura Tokai Sibuya Projection」
+page.content.header.title=Manifest Generator
+page.content.header.header_menu.file_load=Load
+page.content.header.header_menu.import=Import
+page.content.header.header_menu.show_preview=Preview
+page.content.header.header_menu.show_help=Help
+page.content.header.header_menu.about=About
+page.content.header.header_menu_alt.file_load=Open
+page.content.header.header_menu_alt.import=Import
 
-main.content.work.title.1=主な機能
-main.content.work.clause.1=複数の画像、動画の再生
-main.content.work.clause.2=アナログ・デジタル時計の表示
-main.content.work.clause.3=プログラムリストによる正確なメディア制御
-main.content.work.title.2=各モードの説明
-main.content.work.ul.1=ノーマルモード(normal)
-main.content.work.ul.2=画像または動画をそのまま表示するモード。
-main.content.work.ul.3=一定時間何も表示させないことも可能
-main.content.work.ul.4=クロックモード(clock)
-main.content.work.ul.5=ノーマルモードの前面に時計を表示するモード
-main.content.work.ul.6=画像や動画を使わなくても時計をプログラムで時計を描画することも可
-main.content.work.ul.7=時計は現在時刻を正確に刻みます！
-main.content.work.ul.8=ノーマルプラスモード(normal+)
-main.content.work.ul.9=フェードインアウトや回転などの画像や動画が動きます
-main.content.work.ul.10=デバックモード(debug)
-main.content.work.ul.11=テストパターンを表示するモード。プロジェクターの調節用。
+page.content.header.more-info.toka_tools=TokaTools
+page.content.header.more-info.homepage=Homepage
+page.content.header.more-info.twitter=Twitter
+page.content.header.more-info.git_hub=GitHub
+page.content.header.more-info.manifest_help=Manifest Help
+page.content.header.more-info.subpacks_help=Subpacks Help
+page.content.header.more-info.about=about
 
-main.content.howtouse.title.1=使い方
-main.content.howtouse.ol.1=写真や動画などを
-main.content.howtouse.ol.2=data/Media
-main.content.howtouse.ol.3=内に保存します。
-main.content.howtouse.ol.4=プログラムリストに再生する順番などを設定します。
-main.content.howtouse.ol.5=※デフォルトでは
-main.content.howtouse.ol.6=data
-main.content.howtouse.ol.7=内にある
-main.content.howtouse.ol.8=program.xml
-main.content.howtouse.ol.9=を記述します。
-main.content.howtouse.ol.10=プログラムリストの詳しい編集方法はこちら！
-main.content.howtouse.ol.11=アプリケーションを起動します。
-main.content.howtouse.title.2=使用に当たっての注意
-main.content.howtouse.indent.1=リムーバブルディスクなどに保存されている場合はデスクトップにコピーをして使用してください
-main.content.howtouse.indent.2=※リムーバブルディスクから起動した場合は正常に動作しない場合があります。
-main.content.howtouse.indent.3=動作が安定しない場合、動画の画質を落とすことで改善することがあります。
- 
-main.content.changelog.title=更新履歴
-main.content.changelog.1=最新バージョン
-main.content.changelog.2=過去の更新履歴を見る
+page.content.header.page_about.sub_title=TokaTools
+page.content.header.page_about.title=Manifest Generator
+page.content.header.page_about.about_description.1=Minecraft Bedrock Edition (BE) でアドオン(リソースパック、ビヘイビアパック、ワールドテンプレート、スキンパック等)で必須となる manifest.json を生成するツールです。
+page.content.header.page_about.about_description.2=すべての機能に完全対応しています。
+page.content.header.page_about.external_link.tokaTools=TokaTools
+page.content.header.page_about.external_link.tokamcwin10=とかさんのブログ
+page.content.header.page_about.external_link.twitter=Twitter
+page.content.header.page_about.external_link.github=Github
+page.content.header.page_about.external_link.38495158=manifest.jsonの解説ページに飛びます。
+page.content.header.page_about.external_link.39181630=Subpacksの解説ページに飛びます。
 
-main.content.download.title=ダウンロード
-main.content.download.indent.1=-要件-
-main.content.download.indent.2=java 8 をサポートする環境で動作可能
-main.content.download.indent.3=ダウンロードはこちら
+page.content.file-drop-zone=ファイルをドロップして&NewLine;インポートします。
 
-footer.sitemap=ページ一覧
-footer.top=ページの先頭へ戻る
+page.content.welcome.guidance_text=ようこそManifest Generatorへ
+page.content.welcome.quick_start.title=かんたん作成
+page.content.welcome.quick_start.description=シンプルエディタでかんたん作成!ほんの数個の設定するだけ
+page.content.welcome.edit_start.title=新規作成
+page.content.welcome.edit_start.description=manifest.jsonを一から作成します
+page.content.welcome.file_start.title=ファイルを開く
+page.content.welcome.file_start.description=すでにあるmanifest.jsonを開きます
+
+page.editor.option.legend=エディタオプション
+page.editor.option.control_simple.title=エディタをシンプルエディタにします。
+page.editor.option.control_simple.text=シンプルエディタ
+page.editor.option.control_compact.title=改行、空白文字をなくしサイズを小さくします。
+page.editor.option.control_compact.text=JSON最小化
+
+page.editor.definition.legend=Definition
+page.editor.definition.version.title=このmanifest.jsonのフォーマットバージョンを設定します。
+page.editor.definition.version.text=フォーマットバージョン
+
+
+page.editor.header.legend=Header
+page.editor.header.name.title=このパックの名前を設定します。
+page.editor.header.name.text=名前
+page.editor.header.description.title=このパックの説明を設定します。
+page.editor.header.description.text=説明
+page.editor.header.version.title=このパックのバージョンを示します。
+page.editor.header.version.text=バージョン
+page.editor.header.min_engine_version.title=このパックが動作するMinecraftの最小バージョン(このパックの作成バージョン)を設定します。
+page.editor.header.min_engine_version.text=最小エンジンバージョン
+page.editor.header.uuid.title=このパックのUUIDを設定します。
+page.editor.header.uuid.text=UUID
+page.editor.header.platform_locked.title=このパックをマルチプラットフォーム環境で使用できないようにします。
+page.editor.header.platform_locked.text=プラットフォームロック
+page.editor.header.base_game_version.title=このパックワールドの作成されたバージョンを設定します。
+page.editor.header.base_game_version.text=基本ゲームバージョン
+page.editor.header.lock_template_options.title=ワールドテンプレートの導入時、ワールド設定をロックします。
+page.editor.header.lock_template_options.text=テンプレートオプションロック
+page.editor.header.pack_scope.title=導入画面の制限を行います
+page.editor.header.pack_scope.text=パックスコープ
+page.editor.header.pack_scope.select.none=なし
+page.editor.header.pack_scope.select.global=グローバル
+page.editor.header.pack_scope.select.world=ワールド
+
+page.editor.modules.title=このマニフェストを含むパックがどのモジュールを使用するか設定します。
+page.editor.modules.legend=Modules
+page.editor.modules.tab_controls.title=編集するモジュールが複数ある場合、切り替えます。
+page.editor.modules.add.title=モジュールを追加します。
+page.editor.modules.add.text=+ 追加
+page.editor.modules.delete.title=選択しているモジュールを削除します。
+page.editor.modules.delete.text=- 削除
+page.editor.modules.type.title=このモジュールのタイプを設定します。
+page.editor.modules.type.text=タイプ
+page.editor.modules.description.title=このモジュールの説明を設定します。
+page.editor.modules.description.text=説明
+page.editor.modules.version.title=このモジュールのバージョンを設定します。
+page.editor.modules.version.text=バージョン
+page.editor.modules.uuid.title=このモジュールのUUIDを設定します。
+page.editor.modules.uuid.text=UUID
+page.editor.modules.language.title=スクリプト言語を設定します
+page.editor.modules.language.text=言語
+page.editor.modules.entry.title=スクリプトプライマリファイルを設定します。
+page.editor.modules.entry.text=エントリー
+
+page.editor.dependencies.title=依存関係を設定します。依存関係にあるパックが存在する場合、導入時に依存関係にあるパックも同時に導入します。
+page.editor.dependencies.legend=Dependencies
+page.editor.dependencies.tab_controls.title=編集する依存関係が複数ある場合、切り替えます。
+page.editor.dependencies.add.title=依存関係にあるパックを追加します。
+page.editor.dependencies.add.text=+ 追加
+page.editor.dependencies.delete.title=選択しているパックを削除します。
+page.editor.dependencies.delete.text=- 削除
+page.editor.dependencies.uuid.title=依存関係にあるパックのUUIDを設定します。
+page.editor.dependencies.uuid.text=UUID
+page.editor.dependencies.version.title=依存関係にあるパックのバージョンを設定します。
+page.editor.dependencies.version.text=バージョン
+
+page.editor.capabilities.title=特殊な機能を有効にする場合に使用します。
+page.editor.capabilities.legend=Capabilities
+page.editor.capabilities.capabilities_list.title=このパックで追加の機能を有効にします。
+page.editor.capabilities.experimental_custom_ui=カスタムUI機能を有効化します。
+page.editor.capabilities.chemistry=Education Chemistry の機能に追加、変更できるようにします。
+page.editor.capabilities.raytracing=レイトレーシングの機能をパックで使えるようにします。(1.15.x以上)
+
+page.editor.metadata.title=製作者に関する情報を記載します。ゲームプレイへの影響はありません。
+page.editor.metadata.legend=Metadata
+page.editor.metadata.author.title=このパックの作者を設定します。作者は複数追加することができます。
+page.editor.metadata.author.text=作者
+page.editor.metadata.author.add.title=作者入力欄を追加します。
+page.editor.metadata.author.add.text=+ 作者を追加
+page.editor.metadata.author.delete.title=作者入力欄を消します。
+page.editor.metadata.author.delete.text=- 作者を削除
+page.editor.metadata.url.title=このパックのホームページURLを設定します。
+page.editor.metadata.url.text=URL
+page.editor.metadata.license.title=このパックのライセンスを設定します。
+page.editor.metadata.license.text=ライセンス
+
+page.editor.subpacks.title=サブパック機能の設定を行います。アドオンの導入画面で内容を切り替えられる機能です。
+page.editor.subpacks.legend=Subpacks
+page.editor.subpacks.tab_controls.title=編集するサブパックが複数ある場合、切り替えます。
+page.editor.subpacks.add.title=サブパックのフォルダを追加します。
+page.editor.subpacks.add.text=+ 追加
+page.editor.subpacks.delete.title=選択されているサブパックを削除します。
+page.editor.subpacks.delete.text=- 削除
+page.editor.subpacks.folder_name.title=サブパックのフォルダー名を指定します。
+page.editor.subpacks.folder_name.text=フォルダー名
+page.editor.subpacks.name.title=サブパックの実際に表示される名前を設定します。
+page.editor.subpacks.name.text=名前
+page.editor.subpacks.memory_tier.title=このサブパックのメモリ使用量
+page.editor.subpacks.memory_tier.text=メモリティア
+
+page.editor_simple.legend=用途
+page.editor_simple.type.description=このmanifest.jsonの用途を選択します。
+page.editor_simple.type.behavior=ビヘイビアパック
+page.editor_simple.type.texture=リソースパック
+page.editor_simple.type.world=ワールドテンプレート
+page.editor_simple.type.skin=スキンパック
+page.editor_simple.name.legend=パック名
+page.editor_simple.name.description=パックの名前を設定します。設定した名前は管理画面等で表示されます。
+page.editor_simple.name.title=このパックの名前を設定します。
+page.editor_simple.name.placeholder=パック名を入力
+page.editor_simple.description.legend=パック説明
+page.editor_simple.description.description=このパックの説明を設定します。設定した説明は管理画面等で表示されます。
+page.editor_simple.description.title=このパックの説明を設定します。
+page.editor_simple.description.placeholder=説明を入力
+
+page.data_check.control_bar.copy.title=jsonをクリップボードにコピーします。
+page.data_check.control_bar.copy.text=Copy
+page.data_check.control_bar.download.title=manifest.jsonをダウンロードします。
+page.data_check.control_bar.download.text=Download
+page.data_check.control_bar.save.title=manifest.jsonを保存します。 Ctrl+S
+page.data_check.control_bar.save.text=Save
+
+page.data_check.display_preview.header=Minecraft Preview
+
+page.data_check.code_preview.header=Code
+
+page.data_check.issue.status.bar=問題
+page.data_check.issue.status.warning=警告:
+page.data_check.issue.status.error=エラー:
+
+page.unsupported.text.1=ご利用のブラウザ(Internet Explorer)では利用できません。
+page.unsupported.text.2.1=
+page.unsupported.text.2.2=Edge
+page.unsupported.text.2.3=,Chrome,Firefox,Safariをご利用ください
+
+page.help.1=ファイルを読み込みます
+page.help.2.1=データを編集します
+page.help.2.2=エラー等は下にある[問題]タブから見ることができます。
+page.help.3=入力・編集したデータの実際の表示、json閲覧とダウンロード・コピーをします。
+
+
+script.window.page_leave=このページを離れようとしています。
+
+script.issue.clear=問題はありません
+script.issue.text.uuid_empty=UUIDが空です。UUIDを入力してください。
+script.issue.text.uuid_not_valid=入力されている文字列は有効なUUIDではありません。
+script.issue.text.name_empty=名前が空です。
+script.issue.text.last_character_backslash=最後の文字がバックスラッシュ\"\\\"です。エスケープ文字にするか消去してください。
+script.issue.text.header_min_engine_version_higher=フォーマットバージョン1では1.13より低いバージョンに設定する必要があります。これより高いバージョンはフォーマットバージョン2でサポートしています。
+script.issue.text.header_min_engine_version_lower=version1.12以下を指定することはできません。
+script.issue.text.header_base_game_version_lower=version1.12以下を指定することはできません。
+script.issue.text.header_name_empty=名前が空です。名前が空の場合、\"名前がありません\"と表示されます。
+script.issue.text.header_description_empty=説明がありません。説明が空の場合、\"不明なパックの説明\"と表示されます。
+script.issue.text.modules_module_null=typeがnullになっています。typeを選択してください。
+script.issue.text.modules_module_past_versions=\"%s\"は過去のバージョンでサポートされたtypeです。最新バージョンでは動作しません。\"script\"を使用してください。
+script.issue.text.modules_description_empty=説明がありません。
+script.issue.text.modules_not_specified=プライマリファイルが指定されていません
+script.issue.text.modules_not_extension=指定されたファイルは .js の拡張子を持っていません。 プライマリファイルはJavaScriptファイル以外をサポートしません。
+script.issue.text.capabilities_not_selected=一つも項目が選択されていません。
+script.issue.text.metadata_author_not_one=名前が一つもありません。
+script.issue.text.metadata_url_empty=URLが入力されていません。
+script.issue.text.metadata_license_empty=ライセンスが入力されていません。
+script.issue.text.subpacks_folder_empty=フォルダー名が空です。
+
+script.import.not_manifest=このファイルはmanifest.jsonではありません。manifest.jsonを選択してください。
+
+script.display_preview.no_title=名前がありません
+script.display_preview.no_description=§c不明なパックの説明
