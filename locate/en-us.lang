@@ -4,6 +4,7 @@ page.header.og_site_name=Manifest Generator
 page.header.og_title=Manifest Generator
 page.header.og_description=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
+page.header.manifest=./en-us.webapp.webmanifest
 page.header.json_ld.about=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
 page.content.header.title=Manifest Generator
@@ -212,3 +213,9 @@ script.import.not_manifest=This file is not manifest.json, please select manifes
 
 script.display_preview.no_title=No name
 script.display_preview.no_description=§cUnknown Pack Description
+
+
+webmanifest.name=Manifest Generator - TokaTools
+webmanifest.short_name=Manifest Generator
+webmanifest.description=Add-on creation aid for Minecraft Bedrock Edition that makes it easy to create manifest.json.
+webmanifest.lang=en-US

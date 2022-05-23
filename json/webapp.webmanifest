@@ -1,8 +1,9 @@
 {
-  "name": "Manifest Generator - TokaTools",
-  "short_name": "Manifest Generator",
-  "description": "Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。",
+  "name": "{{webmanifest.name}}",
+  "short_name": "{{webmanifest.short_name}}",
+  "description": "{{webmanifest.description}}",
   "display": "standalone",
+  "lang": "{{webmanifest.lang}}",
   "icons": [
     {
       "src": "https://toka7290.github.io/MCAddonSetupManager/img/icon_256.png",
@@ -18,7 +19,7 @@
       "sizes": "2000x2000"
     }
   ],
-  "start_url": "/MCAddonSetupManager/index.html",
+  "start_url": "./index.html",
   "theme_color": "#60ad5e",
   "background_color": "#e8f5e9"
 }

@@ -4,6 +4,8 @@
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
     <meta charset="UTF-8">
     <title>{{page.header.title}}</title>
+    <!-- test page -->
+    <meta name="robots" content="noindex">
     <!-- metadata -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="manifest.json,manifest,Manifest,マニフェスト,Generator,generator,Minecraft,minecraft,マインクラフト,BE,Bedrock Edition,bedrock,tool,ツール,Addon,Add-on,アドオン,resource,behavior,subpacks,metadata,dependencies,modules,capabilities,とかさん">
@@ -30,7 +32,7 @@
     <!-- icon etc -->
     <link rel="apple-touch-icon" href="../img/icon_apple-touch-icon.png">
     <link rel="icon" href="../img/icon.webp">
-    <link rel="manifest" href="../json/webapp.webmanifest">
+    <link rel="manifest" href="{{page.header.manifest}}">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1195,7 +1197,7 @@
               </div>
               <div class="issue-status-error">
                 <img src="../img/error.svg" alt="" width="19px" height="19px">
-                <div>{{page.data_check.issue.status.error}}:<span class="issue-error-num">0</span></div>
+                <div>{{page.data_check.issue.status.error}}<span class="issue-error-num">0</span></div>
               </div>
             </div>
           </label>
