@@ -4,7 +4,6 @@ page.header.og_site_name=Manifest Generator
 page.header.og_title=Manifest Generator
 page.header.og_description=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
-page.header.manifest=./en-us.webapp.webmanifest
 page.header.json_ld.about=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
 page.content.header.title=Manifest Generator

@@ -4,7 +4,6 @@ page.header.og_site_name=Manifest Generator
 page.header.og_title=Manifest Generator
 page.header.og_description=Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。
 
-page.header.manifest=./ja-jp.webapp.webmanifest
 page.header.json_ld.about=Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。
 
 page.content.header.title=Manifest Generator
