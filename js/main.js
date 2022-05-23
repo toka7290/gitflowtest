@@ -190,7 +190,6 @@ window.addEventListener("load", function () {
   if (location.protocol == "https:") {
     let req = new XMLHttpRequest();
     req.open("GET", "./lang.json");
-    req.responseType = "json";
     req.send();
     req.onload = function () {
       LOCATE = JSON.parse(req.response);
