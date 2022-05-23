@@ -21,6 +21,7 @@ do
     echo ${langfiles[i]}
     mkdir -p ./dist/${langages[i]}/
     cp ./html/$target ./dist/${langages[i]}/$target
+    cp ./serviceworker.js ./dist/${langages[i]}/serviceworker.js
     cp ./json/webapp.webmanifest ./dist/${langages[i]}/${langages[i]}.webapp.webmanifest
     python3 replace.py ${langfiles[i]} ./dist/${langages[i]}/ $target ${langages[i]}.webapp.webmanifest
 done
