@@ -11,7 +11,7 @@ langages=(`find ./locate -type f -name *.lang -exec basename {} .lang \;`)
 
 target=index.html
 
-cp -r ./icons ./img ./css ./js ./lib ./favicon.ico ./index.html ./dist/
+cp -r ./icons ./img ./css ./js ./lib ./favicon.ico ./dist/
 
 
 # for lang in ${langages[@]}
