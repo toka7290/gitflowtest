@@ -1,3 +1,6 @@
+# Format Specifiers
+# %v : version
+# %s : string(runtime)
 page.header.title=Manifest Generator - TokaTools
 page.header.description=Minecraft Bedrock Edition 向けのアドオン作成補助ツール。 manifest.jsonを簡単手軽に編集、変換、生成、プレビューできます。 リソースパック、ビヘイビアパック、ワールドテンプレートの他、すべての用途に完全対応！ プレビュー表示機能で装飾文字の編集も簡単！
 page.header.og_site_name=Manifest Generator
@@ -7,6 +10,7 @@ page.header.og_description=Minecraft Bedrock Edition 向けのアドオン作成
 page.header.json_ld.about=Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。
 
 page.content.header.title=Manifest Generator
+page.content.header.version=version: %v
 page.content.header.header_menu.file_load=Load
 page.content.header.header_menu.import=Import
 page.content.header.header_menu.show_preview=Preview
@@ -25,6 +29,7 @@ page.content.header.more-info.about=about
 
 page.content.header.page_about.sub_title=TokaTools
 page.content.header.page_about.title=Manifest Generator
+page.content.header.page_about.version=version: %v
 page.content.header.page_about.about_description.1=Minecraft Bedrock Edition (BE) でアドオン(リソースパック、ビヘイビアパック、ワールドテンプレート、スキンパック等)で必須となる manifest.json を生成するツールです。
 page.content.header.page_about.about_description.2=すべての機能に完全対応しています。
 page.content.header.page_about.external_link.tokaTools=TokaTools

@@ -2,6 +2,7 @@ import sys
 import re
 import json
 
+version = "1.8.0"
 
 args = sys.argv
 if len(args) < 4:
@@ -47,6 +48,8 @@ def setJson(json_dat, key_name, index=0, data=""):
 for data in data_list:
     # split key and text
     key = data.split("=", 1)
+    if("%v" in key[1]):
+        key[1].replace("%v", version)
     # replace html source
     html_source = html_source.replace("{{"+key[0]+"}}", key[1])
     # set locate.json content

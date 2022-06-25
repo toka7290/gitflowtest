@@ -1,3 +1,6 @@
+# Format Specifiers
+# %v : version
+# %s : string(runtime)
 page.header.title=Manifest Generator - TokaTools
 page.header.description=Add-on creation aid for Minecraft Bedrock Edition. Edit, convert, generate, and preview manifest.json easily and conveniently. Full support for resource packs, behavior packs, world templates, and everything in between! Easy editing of decorative text with preview display function!
 page.header.og_site_name=Manifest Generator
@@ -7,6 +10,7 @@ page.header.og_description=Add-on creation aid for Minecraft Bedrock Edition. Ea
 page.header.json_ld.about=Add-on creation aid for Minecraft Bedrock Edition. Easily create manifest.json.
 
 page.content.header.title=Manifest Generator
+page.content.header.version=version: %v
 page.content.header.header_menu.file_load=Load
 page.content.header.header_menu.import=Import
 page.content.header.header_menu.show_preview=Preview

@@ -74,7 +74,7 @@
         </div>
         <div class="title">
           <h1>{{page.content.header.title}}</h1>
-          <p>version: 1.8.0</p>
+          <p>{{page.content.header.version}}</p>
         </div>
         <div class="header-menu">
           <div class="menu_button file_load_button disabled">
@@ -176,7 +176,7 @@
             <img src="../img/icon.svg" alt="" width="180px" height="180px">
             <div class="about-title">
               <h2><span class="sub_title">{{page.content.header.page_about.sub_title}}</span>{{page.content.header.page_about.title}}</h2>
-              <p>version: 1.8.0</p>
+              <p>{{page.content.header.page_about.version}}</p>
             </div>
             <div class="about-description">
               <p>{{page.content.header.page_about.about_description.1}}</p>
@@ -208,7 +208,7 @@
     <div class="file-drop-zone hide">
       <div class="file-drop-zone-textarea">
         <img src="../img/import.svg" alt="import" width="50px" height="50px">
-        <p>ファイルをドロップして&NewLine;インポートします。</p>
+        <p>{{page.content.file-drop-zone}}</p>
       </div>
       <div class="file-drop-zone-pick">
       </div>
