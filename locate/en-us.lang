@@ -218,3 +218,7 @@ webmanifest.name=Manifest Generator - TokaTools
 webmanifest.short_name=Manifest Generator
 webmanifest.description=Add-on creation aid for Minecraft Bedrock Edition that makes it easy to create manifest.json.
 webmanifest.lang=en-US
+
+root.hreflang=en-US
+root.url_of_page=en-us
+root.anchor=en-us

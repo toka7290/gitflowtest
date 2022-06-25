@@ -218,3 +218,7 @@ webmanifest.name=Manifest Generator - TokaTools
 webmanifest.short_name=Manifest Generator
 webmanifest.description=Minecraft Bedrock Edition 向けのアドオン作成補助ツールです。manifest.jsonを簡単に作ることができます。
 webmanifest.lang=ja-JP
+
+root.hreflang=ja-JP
+root.url_of_page=ja-jp
+root.anchor=ja-jp

@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "js-beautify": "^1.14.4",
+    "jsdom": "^20.0.0"
+  },
+  "name": "gitflowtest",
+  "description": "",
+  "version": "1.0.0",
+  "main": "root.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "node root.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toka7290/gitflowtest.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toka7290/gitflowtest/issues"
+  },
+  "homepage": "https://github.com/toka7290/gitflowtest#readme"
+}
